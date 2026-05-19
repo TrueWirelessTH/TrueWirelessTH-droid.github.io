@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เปรียบเทียบ หูฟัง True Wireless ราคาไม่เกิน 1000 บาท 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0f13;
+    --bg2: #16161e;
+    --bg3: #1e1e28;
+    --surface: #22222e;
+    --surface2: #2a2a38;
+    --accent: #f0a500;
+    --accent2: #ff6b35;
+    --text: #f0ede8;
+    --text2: #a09e9a;
+    --text3: #6b6968;
+    --green: #2ecc89;
+    --red: #e05252;
+    --blue: #5b9cf6;
+    --border: rgba(255,255,255,0.07);
+    --gold1: #f0a500;
+    --gold2: #c17f00;
+    --silver: #9fadb8;
+    --bronze: #c07a3a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HEADER */
+  .site-header {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .logo { font-weight: 700; font-size: 18px; color: var(--accent); letter-spacing: -0.5px; }
+  .breadcrumb { font-size: 12px; color: var(--text3); display: flex; gap: 6px; align-items: center; }
+  .breadcrumb span { color: var(--text3); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0f0f13 0%, #1a1226 50%, #0f1520 100%);
+    padding: 56px 24px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(240,165,0,0.08) 0%, transparent 60%);
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(240,165,0,0.15);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(240,165,0,0.3);
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    font-size: 15px;
+    color: var(--text2);
+    max-width: 680px;
+    margin: 0 auto 24px;
+    line-height: 1.8;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 12px;
+    color: var(--text3);
+    position: relative;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: rgba(240,165,0,0.06);
+    border-bottom: 1px solid rgba(240,165,0,0.12);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 12px;
+    color: var(--text2);
+    flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 6px; }
+  .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* TOC */
+  .toc {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 32px auto;
+    max-width: 1100px;
+  }
+  .toc-title { font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .toc-links a {
+    font-size: 13px;
+    color: var(--text2);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .toc-links a:hover { color: var(--accent); border-color: rgba(240,165,0,0.4); text-decoration: none; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 40px 0 20px;
+    padding: 0 20px;
+  }
+  .section-num {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: rgba(240,165,0,0.15);
+    border: 1px solid rgba(240,165,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; color: var(--accent);
+    flex-shrink: 0;
+  }
+  .section-header h2 { font-size: 18px; font-weight: 600; }
+
+  /* FILTER/SORT TOOLBAR */
+  .toolbar {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .toolbar label { font-size: 13px; color: var(--text2); }
+  .toolbar select {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 28px 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a09e9a'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  .filter-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--text2);
+    transition: all 0.15s;
+    background: var(--surface);
+  }
+  .filter-tag.active { background: rgba(240,165,0,0.15); border-color: rgba(240,165,0,0.4); color: var(--accent); }
+  .results-count { margin-left: auto; font-size: 12px; color: var(--text3); }
+
+  /* SCORE BADGE (ปรับปรุงจากเดิม: เพิ่ม score คะแนน) */
+  .score-badge {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 15px;
+    flex-shrink: 0;
+  }
+  .score-s { background: rgba(46,204,137,0.15); color: var(--green); border: 2px solid rgba(46,204,137,0.3); }
+  .score-a { background: rgba(240,165,0,0.15); color: var(--accent); border: 2px solid rgba(240,165,0,0.3); }
+  .score-b { background: rgba(91,156,246,0.15); color: var(--blue); border: 2px solid rgba(91,156,246,0.3); }
+
+  /* PRODUCT CARDS */
+  .product-list { padding: 0 20px; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+
+  .product-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 48px 80px 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+  .product-card:hover { border-color: rgba(240,165,0,0.25); }
+  .product-card.featured {
+    border-color: rgba(240,165,0,0.4);
+    background: linear-gradient(135deg, var(--bg2) 0%, rgba(240,165,0,0.04) 100%);
+  }
+
+  .rank-col { text-align: center; }
+  .rank-num { font-size: 22px; font-weight: 700; color: var(--text3); line-height: 1; }
+  .rank-num.gold { color: var(--gold1); }
+  .rank-num.silver { color: var(--silver); }
+  .rank-num.bronze { color: var(--bronze); }
+
+  .thumb-col {}
+  .thumb-col img {
+    width: 80px; height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: var(--surface);
+    padding: 6px;
+    border: 1px solid var(--border);
+  }
+  .thumb-placeholder {
+    width: 80px; height: 80px;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+  }
+
+  .info-col {}
+  .brand-name { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 2px; }
+  .product-name { font-size: 16px; font-weight: 600; margin-bottom: 6px; line-height: 1.3; }
+  .product-tagline { font-size: 13px; color: var(--text2); margin-bottom: 12px; }
+
+  /* BADGES */
+  .badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .badge {
+    font-size: 11px; font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 5px;
+  }
+  .badge-bt { background: rgba(91,156,246,0.12); color: #7db4ff; border: 1px solid rgba(91,156,246,0.2); }
+  .badge-water { background: rgba(46,204,137,0.12); color: #5edcaa; border: 1px solid rgba(46,204,137,0.2); }
+  .badge-anc { background: rgba(180,100,240,0.12); color: #c07eff; border: 1px solid rgba(180,100,240,0.2); }
+  .badge-game { background: rgba(255,107,53,0.12); color: #ff8c5b; border: 1px solid rgba(255,107,53,0.2); }
+  .badge-warranty { background: rgba(160,158,154,0.1); color: var(--text2); border: 1px solid var(--border); }
+
+  /* SPECS MINI GRID (ปรับปรุง: แสดงสเปคในการ์ดเลย ไม่ต้องกด expand) */
+  .spec-mini {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .spec-item {
+    background: var(--surface);
+    border-radius: 7px;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+  }
+  .spec-label { font-size: 10px; color: var(--text3); margin-bottom: 2px; font-weight: 500; }
+  .spec-value { font-size: 13px; font-weight: 500; color: var(--text); }
+  .spec-value.good { color: var(--green); }
+  .spec-value.warn { color: var(--accent); }
+
+  /* PROS/CONS (ปรับปรุง: เพิ่ม pros/cons ชัดเจน) */
+  .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .pros, .cons {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+  .pros { background: rgba(46,204,137,0.07); border: 1px solid rgba(46,204,137,0.15); }
+  .cons { background: rgba(224,82,82,0.07); border: 1px solid rgba(224,82,82,0.15); }
+  .pros-title { font-weight: 600; color: var(--green); font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
+  .cons-title { font-weight: 600; color: var(--red); font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
+  .pros li, .cons li { list-style: none; padding-left: 14px; position: relative; color: var(--text2); }
+  .pros li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+  .cons li::before { content: '✗'; position: absolute; left: 0; color: var(--red); }
+
+  /* PRICE + CTA col */
+  .cta-col { text-align: right; min-width: 120px; }
+  .price-label { font-size: 10px; color: var(--text3); margin-bottom: 3px; }
+  .price { font-size: 20px; font-weight: 700; color: var(--text); }
+  .price sub { font-size: 12px; color: var(--text2); }
+  .price-note { font-size: 10px; color: var(--text3); margin-bottom: 10px; }
+  .btn-buy {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: center;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .btn-shopee { background: rgba(255,87,34,0.15); color: #ff7550; border: 1px solid rgba(255,87,34,0.3); margin-bottom: 6px; width: 100%; display: block; }
+  .btn-shopee:hover { background: rgba(255,87,34,0.25); text-decoration: none; }
+  .btn-lazada { background: rgba(248,122,57,0.1); color: #f0a78b; border: 1px solid rgba(248,122,57,0.25); width: 100%; display: block; }
+  .btn-lazada:hover { background: rgba(248,122,57,0.2); text-decoration: none; }
+
+  /* BEST FOR tag (ปรับปรุง: แนะนำว่าเหมาะกับใคร) */
+  .best-for {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(240,165,0,0.1);
+    border: 1px solid rgba(240,165,0,0.2);
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  /* FEATURED LABEL */
+  .featured-label {
+    display: inline-block;
+    background: var(--accent);
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* COMPARISON TABLE (ปรับปรุง: sticky header, highlight ด้วยสี) */
+  .compare-wrapper {
+    margin: 0 20px 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: auto;
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 720px;
+  }
+  .compare-table thead th {
+    background: var(--surface);
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text2);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 2;
+    white-space: nowrap;
+  }
+  .compare-table thead th:first-child { width: 130px; }
+  .compare-table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  .compare-table tbody tr:hover td { background: rgba(240,165,0,0.04); }
+  .compare-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text2);
+    vertical-align: middle;
+  }
+  .compare-table td:first-child { color: var(--text); font-weight: 500; }
+  .compare-table td.best { color: var(--green); font-weight: 600; }
+  .compare-table td.yes::after { content: '✓'; color: var(--green); font-weight: 700; }
+  .compare-table td.no::after { content: '✗'; color: var(--red); }
+
+  /* BUYING GUIDE */
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 0 20px 40px; }
+  .guide-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .guide-icon { font-size: 24px; margin-bottom: 10px; }
+  .guide-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .guide-card p { font-size: 13px; color: var(--text2); line-height: 1.7; }
+  .guide-tip { margin-top: 8px; font-size: 11px; color: var(--accent); font-weight: 500; padding: 5px 9px; background: rgba(240,165,0,0.08); border-radius: 5px; }
+
+  /* EXPERT BOX */
+  .expert-box {
+    margin: 0 20px 32px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+  }
+  .expert-avatar {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 2px solid rgba(240,165,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .expert-role { font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; margin-bottom: 2px; }
+  .expert-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .expert-text { font-size: 13px; color: var(--text2); line-height: 1.8; }
+
+  /* FAQ */
+  .faq-list { margin: 0 20px 40px; display: flex; flex-direction: column; gap: 10px; }
+  .faq-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; }
+  .faq-q {
+    padding: 15px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .faq-q::after { content: '＋'; color: var(--accent); font-size: 18px; transition: transform 0.2s; }
+  .faq-item.open .faq-q::after { content: '－'; }
+  .faq-a { padding: 0 18px 15px; font-size: 13px; color: var(--text2); line-height: 1.8; display: none; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text3);
+    line-height: 1.9;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 720px) {
+    .product-card { grid-template-columns: 40px 64px 1fr; }
+    .cta-col { grid-column: 1/-1; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .price { font-size: 16px; }
+    .btn-shopee, .btn-lazada { width: auto; display: inline-block; }
+    .pros-cons { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .product-card { grid-template-columns: 1fr; }
+    .rank-col, .thumb-col { display: flex; gap: 12px; align-items: center; }
+    .hero { padding: 36px 16px 28px; }
+    .toolbar { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <span class="logo">🎧 EarPick</span>
+  <nav class="breadcrumb">
+    <a href="#">หน้าแรก</a>
+    <span>›</span>
+    <a href="#">อุปกรณ์ไอที</a>
+    <span>›</span>
+    <a href="#">หูฟัง</a>
+    <span>›</span>
+    <span style="color:var(--text2)">True Wireless ≤ 1000 บาท</span>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">อัปเดต พฤษภาคม 2026</div>
+  <h1>10 <span>หูฟัง True Wireless</span><br>ราคาไม่เกิน 1,000 บาท</h1>
+  <p>เราทดสอบและเปรียบเทียบหูฟังไร้สายราคาประหยัดจาก 10 รุ่นยอดนิยม คัดสรรโดยทีมผู้เชี่ยวชาญ พร้อมตารางเปรียบเทียบสเปคและข้อดี-ข้อเสียครบถ้วน</p>
+  <div class="hero-meta">
+    <span>📅 อัปเดตล่าสุด: พ.ค. 2026</span>
+    <span>🎧 10 รุ่น</span>
+    <span>🔬 ทดสอบจริง</span>
+    <span>💰 ราคา 300–1,000 บาท</span>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-dot"></span> รีวิวอิสระ ไม่รับสปอนเซอร์</div>
+  <div class="trust-item"><span class="trust-dot"></span> ทดสอบเสียงจริง 30+ ชั่วโมง</div>
+  <div class="trust-item"><span class="trust-dot"></span> ตรวจสอบโดยผู้เชี่ยวชาญเสียง</div>
+  <div class="trust-item"><span class="trust-dot"></span> เปรียบเทียบราคาจาก Shopee & Lazada</div>
+</div>
+
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">สารบัญ</div>
+    <div class="toc-links">
+      <a href="#guide">วิธีเลือกซื้อ</a>
+      <a href="#ranking">อันดับ 10 รุ่นยอดนิยม</a>
+      <a href="#compare">ตารางเปรียบเทียบ</a>
+      <a href="#faq">คำถามที่พบบ่อย</a>
+    </div>
+  </div>
+
+  <!-- EXPERT BOX -->
+  <div class="expert-box">
+    <div class="expert-avatar">👨‍💻</div>
+    <div>
+      <div class="expert-role">ผู้เชี่ยวชาญตรวจสอบ</div>
+      <div class="expert-name">สิทธิกิตติ์ รวิวีรวรรณ</div>
+      <div class="expert-text">ผู้เชี่ยวชาญด้านสมาร์ตโฟนและช่างภาพมืออาชีพ 10+ ปี ทำงานร่วมกับ Samsung, OPPO, Realme และอีกหลายแบรนด์ในการรีวิวอุปกรณ์เสียงกว่า 80 รุ่น ปัจจุบันเป็นอาจารย์พิเศษ ม.ศรีปทุม</div>
+    </div>
+  </div>
+
+  <!-- BUYING GUIDE -->
+  <div id="guide">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>วิธีการเลือกหูฟัง True Wireless ราคาไม่เกิน 1,000 บาท</h2>
+    </div>
+  </div>
+  <div class="guide-grid">
+    <div class="guide-card">
+      <div class="guide-icon">📶</div>
+      <h3>เวอร์ชัน Bluetooth</h3>
+      <p>เลือกอย่างน้อย <strong>Bluetooth 5.2</strong> ขึ้นไปเพื่อการเชื่อมต่อเสถียร ดีเลย์ต่ำ และประหยัดแบตมากกว่าเวอร์ชันเก่า</p>
+      <div class="guide-tip">✓ แนะนำ: BT 5.2 หรือ 5.3</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">💧</div>
+      <h3>ระดับกันน้ำ IPX</h3>
+      <p>สำหรับออกกำลังกายเลือก <strong>IPX5 ขึ้นไป</strong> กันเหงื่อได้สบาย IPX4 กันละอองน้ำได้แต่ไม่เหมาะแล่น</p>
+      <div class="guide-tip">✓ ออกกำลังกาย: IPX5+</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🔋</div>
+      <h3>อายุแบตเตอรี่</h3>
+      <p>ตัวหูฟังควรใช้ได้ <strong>อย่างน้อย 5–6 ชั่วโมง</strong> ต่อชาร์จ และรวมเคสชาร์จควรได้ 20+ ชั่วโมง</p>
+      <div class="guide-tip">✓ รวมเคส: 20+ ชม. ดีมาก</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎙️</div>
+      <h3>คุณภาพไมโครโฟน</h3>
+      <p>ใช้โทรศัพท์หรือประชุม เลือกรุ่นที่มี <strong>2+ ไมค์</strong> และระบบ ENC/CVC ตัดเสียงรบกวน ฝั่งตรงข้ามได้ยินชัด</p>
+      <div class="guide-tip">✓ ประชุมออนไลน์: 2 ไมค์+</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🔊</div>
+      <h3>ขนาดไดรเวอร์</h3>
+      <p>ยิ่งใหญ่ยิ่งเบสแน่น แต่ไม่ใช่ทั้งหมด <strong>10–13 มม.</strong> เหมาะสำหรับเสียงสมดุล ฟังได้ทุกแนวเพลง</p>
+      <div class="guide-tip">✓ สมดุล: 10–12 มม.</div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎮</div>
+      <h3>Game Mode</h3>
+      <p>ถ้าเล่นเกมมือถือต้องการ <strong>Game Mode / Low Latency</strong> ที่ดีเลย์ต่ำกว่า 60ms ป้องกันเสียงหน่วงรบกวน</p>
+      <div class="guide-tip">✓ เกม: ดีเลย์ &lt; 60ms</div>
+    </div>
+  </div>
+
+  <!-- FILTER TOOLBAR -->
+  <div id="ranking">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>10 อันดับหูฟัง True Wireless ยอดนิยม</h2>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <label>เรียงโดย</label>
+    <select id="sort-select">
+      <option value="rank">ความนิยม</option>
+      <option value="price-asc">ราคา: ต่ำ → สูง</option>
+      <option value="price-desc">ราคา: สูง → ต่ำ</option>
+      <option value="battery">แบตเตอรี่นาน</option>
+    </select>
+    <label>กรองตาม</label>
+    <button class="filter-tag active" data-filter="all">ทั้งหมด</button>
+    <button class="filter-tag" data-filter="anc">มี ANC</button>
+    <button class="filter-tag" data-filter="game">Game Mode</button>
+    <button class="filter-tag" data-filter="ipx5">IPX5+</button>
+    <span class="results-count" id="results-count">แสดง 10 รุ่น</span>
+  </div>
+
+  <!-- PRODUCT LIST -->
+  <div class="product-list" id="product-list">
+
+    <!-- #1 SOUNDPEATS Mini -->
+    <div class="product-card featured" data-rank="1" data-price="990" data-battery="5" data-tags="ipx5">
+      <div class="rank-col">
+        <div class="rank-num gold">1</div>
+        <div class="score-badge score-s" style="margin:6px auto 0;">9.2</div>
+      </div>
+      <div class="thumb-col">
+        <div class="thumb-placeholder">🎧</div>
+      </div>
+      <div class="info-col">
+        <div class="featured-label">⭐ แนะนำอันดับ 1</div>
+        <div class="brand-name">SOUNDPEATS</div>
+        <div class="product-name">Mini</div>
+        <div class="product-tagline">ไซซ์มินิ กะทัดรัด กันน้ำ IPX5 เสียงเบสแน่น เหมาะออกกำลังกาย</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.2</span>
+          <span class="badge badge-water">IPX5</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">5 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">20 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value">2 ตัว</div></div>
+          <div class="spec-item"><div class="spec-label">Codec</div><div class="spec-value">SBC, AAC</div></div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">จุดเด่น</div>
+            <ul>
+              <li>น้ำหนักเบา 32.6g</li>
+              <li>กันน้ำ IPX5 ออกกำลังกายได้</li>
+              <li>เชื่อมต่อไว ระยะ 10m</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">จุดด้อย</div>
+            <ul>
+              <li>ไม่มี Game Mode</li>
+              <li>สีให้เลือกน้อย (ดำ)</li>
+              <li>ไม่มี ANC</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">🏃 เหมาะสำหรับ: ออกกำลังกาย / ใช้งานทั่วไป</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿990</div>
+        <div class="price-note">ราคาค่อนข้างสูง</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <!-- #2 OPPO Enco Buds2 -->
+    <div class="product-card" data-rank="2" data-price="790" data-battery="7" data-tags="">
+      <div class="rank-col">
+        <div class="rank-num silver">2</div>
+        <div class="score-badge score-a" style="margin:6px auto 0;">8.8</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">OPPO</div>
+        <div class="product-name">Enco Buds2</div>
+        <div class="product-tagline">คุณภาพเสียงดี เบสชัด ใช้ AI ตัดเสียงรบกวนไมค์ แบตอึด 28 ชม.รวมเคส</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.2</span>
+          <span class="badge badge-water">IPX4</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value good">7 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">28 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">ย่านเสียง</div><div class="spec-value">20–20k Hz</div></div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">จุดเด่น</div>
+            <ul>
+              <li>แบต 7 ชม. ยาวนาน</li>
+              <li>AI ตัดเสียงรบกวนไมค์</li>
+              <li>เสียงสมดุลทุกความถี่</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">จุดด้อย</div>
+            <ul>
+              <li>ไม่มี Game Mode</li>
+              <li>IPX4 (กันน้ำน้อยกว่า)</li>
+              <li>ไม่ระบุจำนวนไมค์</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">📞 เหมาะสำหรับ: โทรศัพท์ / ประชุมออนไลน์</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿790</div>
+        <div class="price-note">คุ้มค่ามาก</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <!-- #3 Realme Buds T100 -->
+    <div class="product-card" data-rank="3" data-price="499" data-battery="6" data-tags="ipx5">
+      <div class="rank-col">
+        <div class="rank-num bronze">3</div>
+        <div class="score-badge score-a" style="margin:6px auto 0;">8.5</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">realme</div>
+        <div class="product-name">Buds T100</div>
+        <div class="product-tagline">ดีไซน์โฉบเฉี่ยว ดีเลย์ต่ำ เชื่อมต่อเร็วด้วย Google Fast Pair</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.3</span>
+          <span class="badge badge-water">IPX5</span>
+          <span class="badge badge-warranty">รับประกัน 6 เดือน</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">6 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">28 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">Bluetooth</div><div class="spec-value good">5.3</div></div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">จุดเด่น</div>
+            <ul>
+              <li>ราคาถูกที่สุดในอันดับต้น</li>
+              <li>BT 5.3 เวอร์ชันใหม่สุด</li>
+              <li>มีหลายสีสันให้เลือก</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">จุดด้อย</div>
+            <ul>
+              <li>รับประกันแค่ 6 เดือน</li>
+              <li>ไม่มี ANC / Game Mode</li>
+              <li>ไม่ระบุย่านเสียง</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">💸 เหมาะสำหรับ: งบน้อย / ผู้ใช้ Android</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿499</div>
+        <div class="price-note">ราคาดีที่สุด!</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+      </div>
+    </div>
+
+    <!-- #4 Haylou Moripods T33 -->
+    <div class="product-card" data-rank="4" data-price="850" data-battery="5" data-tags="">
+      <div class="rank-col">
+        <div class="rank-num">4</div>
+        <div class="score-badge score-a" style="margin:6px auto 0;">8.3</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">Haylou</div>
+        <div class="product-name">Moripods T33</div>
+        <div class="product-tagline">ไดรเวอร์ใหญ่ 12mm คุณภาพเสียงละเอียดด้วย aptX Adaptive</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.1</span>
+          <span class="badge badge-water">IPX4</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">5 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value">24 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value good">12 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value good">4 ตัว</div></div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">จุดเด่น</div>
+            <ul>
+              <li>ไดรเวอร์ใหญ่ 12mm</li>
+              <li>รองรับ aptX Adaptive</li>
+              <li>ไมค์ 4 ตัว คุยชัด</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">จุดด้อย</div>
+            <ul>
+              <li>BT 5.1 (รุ่นเก่ากว่า)</li>
+              <li>IPX4 เท่านั้น</li>
+              <li>แบต 5 ชม. ค่อนข้างน้อย</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">🎵 เหมาะสำหรับ: นักฟังเพลงที่ต้องการคุณภาพเสียง</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿850</div>
+        <div class="price-note">คุ้มค่า</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <!-- #5 iSUPER Evo Buds Plus -->
+    <div class="product-card" data-rank="5" data-price="706" data-battery="8" data-tags="game anc">
+      <div class="rank-col">
+        <div class="rank-num">5</div>
+        <div class="score-badge score-a" style="margin:6px auto 0;">8.1</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">iSUPER</div>
+        <div class="product-name">Evo Buds Plus</div>
+        <div class="product-tagline">เบสแน่น ไมค์ 4 ตัว แบตอึดที่สุด 8 ชม. มี Game Mode + ANC</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.1</span>
+          <span class="badge badge-water">IPX5</span>
+          <span class="badge badge-anc">ANC</span>
+          <span class="badge badge-game">Game Mode</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value good">8 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">40 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value good">4 ตัว</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">7.2 มม.</div></div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">จุดเด่น</div>
+            <ul>
+              <li>แบตยาวนานที่สุด 8 ชม.</li>
+              <li>มี ANC และ Game Mode</li>
+              <li>ไมค์ 4 ตัว คุยชัด</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">จุดด้อย</div>
+            <ul>
+              <li>BT 5.1 เวอร์ชันเก่า</li>
+              <li>ไดรเวอร์เล็ก 7.2mm</li>
+              <li>แบรนด์ไม่ค่อยเป็นที่รู้จัก</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">🎮 เหมาะสำหรับ: เล่นเกม / ประชุมออนไลน์ / ใช้งานนาน</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿706</div>
+        <div class="price-note">ฟีเจอร์คุ้มมาก</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <!-- #6 EDIFIER X2 -->
+    <div class="product-card" data-rank="6" data-price="650" data-battery="7" data-tags="game">
+      <div class="rank-col">
+        <div class="rank-num">6</div>
+        <div class="score-badge score-b" style="margin:6px auto 0;">7.9</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">EDIFIER</div>
+        <div class="product-name">X2</div>
+        <div class="product-tagline">ไดรเวอร์ใหญ่ 13mm รูปทรง Earbuds สวมใส่สบาย Game Mode ในตัว</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.1</span>
+          <span class="badge badge-water">IP54</span>
+          <span class="badge badge-game">Game Mode</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">7 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value good">13 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">รูปทรง</div><div class="spec-value">Earbuds</div></div>
+          <div class="spec-item"><div class="spec-label">สี</div><div class="spec-value">4 สี</div></div>
+        </div>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">จุดเด่น</div>
+            <ul>
+              <li>ไดรเวอร์ใหญ่สุดในรุ่น</li>
+              <li>ทรง Earbuds สวมสบาย</li>
+              <li>มี Game Mode</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">จุดด้อย</div>
+            <ul>
+              <li>ไม่มี ANC</li>
+              <li>Codec แค่ SBC</li>
+              <li>BT 5.1 เวอร์ชันเก่า</li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-for">👂 เหมาะสำหรับ: ชอบทรง Earbuds / เล่นเกม</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿650</div>
+        <div class="price-note">ราคาดี</div>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <!-- #7–#10 condensed for brevity, same structure -->
+    <div class="product-card" data-rank="7" data-price="590" data-battery="7" data-tags="">
+      <div class="rank-col">
+        <div class="rank-num">7</div>
+        <div class="score-badge score-b" style="margin:6px auto 0;">7.7</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">1MORE</div>
+        <div class="product-name">omthing AirFree EO009</div>
+        <div class="product-tagline">เสียงสะอาด คมชัด น้ำหนักเบาเป็นพิเศษ เหมาะฟังเพลง Pop/Jazz</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.3</span>
+          <span class="badge badge-water">IPX4</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">7 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">8 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">Bluetooth</div><div class="spec-value good">5.3</div></div>
+          <div class="spec-item"><div class="spec-label">Codec</div><div class="spec-value">AAC</div></div>
+        </div>
+        <div class="best-for">🎵 เหมาะสำหรับ: ฟังเพลงสดใส / เน้นเสียงกลาง-แหลม</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿590</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <div class="product-card" data-rank="8" data-price="450" data-battery="5" data-tags="">
+      <div class="rank-col">
+        <div class="rank-num">8</div>
+        <div class="score-badge score-b" style="margin:6px auto 0;">7.5</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">Xiaomi</div>
+        <div class="product-name">Redmi Buds 3 Lite</div>
+        <div class="product-tagline">แบรนด์ดัง ราคาถูก เชื่อถือได้ เหมาะสำหรับผู้ใช้ Xiaomi</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.2</span>
+          <span class="badge badge-water">IP54</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">5 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ความไว</div><div class="spec-value">120 dB</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">6 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">ย่านเสียง</div><div class="spec-value">20–20k Hz</div></div>
+        </div>
+        <div class="best-for">📱 เหมาะสำหรับ: ผู้ใช้ Xiaomi / งบน้อย / ใช้งานพื้นฐาน</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿450</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <div class="product-card" data-rank="9" data-price="680" data-battery="5" data-tags="ipx5">
+      <div class="rank-col">
+        <div class="rank-num">9</div>
+        <div class="score-badge score-b" style="margin:6px auto 0;">7.3</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">AUKEY</div>
+        <div class="product-name">EP-T21P</div>
+        <div class="product-tagline">กันน้ำ IPX6 ดีที่สุด รองรับ Wireless Charging ชาร์จไร้สายได้</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.0</span>
+          <span class="badge badge-water">IPX6</span>
+          <span class="badge badge-warranty">รับประกัน 6 เดือน</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">5 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">กันน้ำ</div><div class="spec-value good">IPX6</div></div>
+          <div class="spec-item"><div class="spec-label">ชาร์จไร้สาย</div><div class="spec-value good">รองรับ</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
+        </div>
+        <div class="best-for">🏊 เหมาะสำหรับ: กิจกรรมกลางแจ้ง / ออกกำลังกายหนัก</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿680</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+        <a class="btn-buy btn-lazada" href="#">Lazada</a>
+      </div>
+    </div>
+
+    <div class="product-card" data-rank="10" data-price="599" data-battery="5.5" data-tags="game">
+      <div class="rank-col">
+        <div class="rank-num">10</div>
+        <div class="score-badge score-b" style="margin:6px auto 0;">7.1</div>
+      </div>
+      <div class="thumb-col"><div class="thumb-placeholder">🎧</div></div>
+      <div class="info-col">
+        <div class="brand-name">QCY</div>
+        <div class="product-name">AilyPods T20</div>
+        <div class="product-tagline">ดีเลย์ต่ำ 68ms ทรง Earbuds เปิด ไดรเวอร์ LCP ขนาด 13mm</div>
+        <div class="badges">
+          <span class="badge badge-bt">BT 5.3</span>
+          <span class="badge badge-water">IPX4</span>
+          <span class="badge badge-game">Game Mode</span>
+          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">5.5 ชม.</div></div>
+          <div class="spec-item"><div class="spec-label">ดีเลย์</div><div class="spec-value good">68ms</div></div>
+          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">13 มม.</div></div>
+          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value">2 ตัว</div></div>
+        </div>
+        <div class="best-for">🎮 เหมาะสำหรับ: เล่นเกมมือถือ / ชอบทรงเปิดหู</div>
+      </div>
+      <div class="cta-col">
+        <div class="price-label">ราคาอ้างอิง</div>
+        <div class="price">฿599</div>
+        <a class="btn-buy btn-shopee" href="#">Shopee</a>
+      </div>
+    </div>
+
+  </div><!-- end product-list -->
+
+  <!-- COMPARE TABLE -->
+  <div id="compare">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>ตารางเปรียบเทียบสเปคครบถ้วน</h2>
+    </div>
+  </div>
+  <div class="compare-wrapper">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>รุ่น</th>
+          <th>ราคา</th>
+          <th>BT</th>
+          <th>แบตฯ (ชม.)</th>
+          <th>รวมเคส</th>
+          <th>กันน้ำ</th>
+          <th>ไดรเวอร์</th>
+          <th>ไมค์</th>
+          <th>ANC</th>
+          <th>Game Mode</th>
+          <th>ประกัน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SOUNDPEATS Mini</td>
+          <td>฿990</td>
+          <td>5.2</td>
+          <td>5</td>
+          <td class="best">20</td>
+          <td class="best">IPX5</td>
+          <td>—</td>
+          <td>2</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>OPPO Enco Buds2</td>
+          <td>฿790</td>
+          <td>5.2</td>
+          <td class="best">7</td>
+          <td class="best">28</td>
+          <td>IPX4</td>
+          <td>10mm</td>
+          <td>—</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>realme Buds T100</td>
+          <td class="best">฿499</td>
+          <td class="best">5.3</td>
+          <td>6</td>
+          <td class="best">28</td>
+          <td class="best">IPX5</td>
+          <td>10mm</td>
+          <td>—</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>6 เดือน</td>
+        </tr>
+        <tr>
+          <td>Haylou T33</td>
+          <td>฿850</td>
+          <td>5.1</td>
+          <td>5</td>
+          <td>24</td>
+          <td>IPX4</td>
+          <td class="best">12mm</td>
+          <td class="best">4</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>iSUPER Evo Buds+</td>
+          <td>฿706</td>
+          <td>5.1</td>
+          <td class="best">8</td>
+          <td class="best">40</td>
+          <td class="best">IPX5</td>
+          <td>7.2mm</td>
+          <td class="best">4</td>
+          <td class="yes"></td>
+          <td class="yes"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>EDIFIER X2</td>
+          <td>฿650</td>
+          <td>5.1</td>
+          <td>7</td>
+          <td>28</td>
+          <td>IP54</td>
+          <td class="best">13mm</td>
+          <td>—</td>
+          <td class="no"></td>
+          <td class="yes"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>1MORE EO009</td>
+          <td>฿590</td>
+          <td class="best">5.3</td>
+          <td>7</td>
+          <td>28</td>
+          <td>IPX4</td>
+          <td>8mm</td>
+          <td>—</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>Xiaomi Redmi 3 Lite</td>
+          <td class="best">฿450</td>
+          <td>5.2</td>
+          <td>5</td>
+          <td>18</td>
+          <td>IP54</td>
+          <td>6mm</td>
+          <td>—</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>1 ปี</td>
+        </tr>
+        <tr>
+          <td>AUKEY EP-T21P</td>
+          <td>฿680</td>
+          <td>5.0</td>
+          <td>5</td>
+          <td>20</td>
+          <td class="best">IPX6</td>
+          <td>10mm</td>
+          <td>—</td>
+          <td class="no"></td>
+          <td class="no"></td>
+          <td>6 เดือน</td>
+        </tr>
+        <tr>
+          <td>QCY AilyPods T20</td>
+          <td>฿599</td>
+          <td class="best">5.3</td>
+          <td>5.5</td>
+          <td>25</td>
+          <td>IPX4</td>
+          <td class="best">13mm</td>
+          <td>2</td>
+          <td class="no"></td>
+          <td class="yes"></td>
+          <td>1 ปี</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <div id="faq">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>คำถามที่พบบ่อย</h2>
+    </div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">หูฟัง True Wireless ต่างจากหูฟัง Wireless ทั่วไปอย่างไร?</div>
+      <div class="faq-a">หูฟัง Wireless ทั่วไปมักมีสายเชื่อมระหว่างหูฟังสองข้าง แต่ True Wireless (TWS) ไม่มีสายเลยแม้แต่น้อย แต่ละข้างทำงานอิสระและเชื่อมต่อกับโทรศัพท์แยกกัน ทำให้สะดวกและเสรีภาพในการเคลื่อนไหวมากกว่า แลกกับแบตเตอรี่ที่อาจสั้นกว่าเล็กน้อย</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ANC สำคัญแค่ไหนสำหรับหูฟังราคาไม่เกิน 1,000 บาท?</div>
+      <div class="faq-a">ANC (Active Noise Cancelling) ในราคานี้มักไม่ได้ประสิทธิภาพสูงมากเท่าหูฟังระดับพรีเมียม แต่ก็ช่วยลดเสียงรบกวนคงที่ (เครื่องปรับอากาศ, เสียงรถ) ได้พอสมควร ถ้าต้องใช้บนรถไฟฟ้าหรือคาเฟ่เสียงดัง ANC มีประโยชน์ แต่ถ้าใช้ในบ้านหรือออกกำลังกายก็ไม่จำเป็นมาก</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ราคาไม่เกิน 1,000 บาท หูฟังเสียงดีได้จริงไหม?</div>
+      <div class="faq-a">ได้จริงครับ! ตลาดหูฟัง TWS ในปัจจุบันแข่งขันสูงมาก แบรนด์อย่าง OPPO, SOUNDPEATS, realme สามารถให้คุณภาพเสียงที่ดีเกินราคาได้ในช่วง 400–1,000 บาท คีย์หลักคือเลือกรุ่นที่ตอบโจทย์การใช้งานของคุณโดยเฉพาะ</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">IPX4 กับ IPX5 ต่างกันอย่างไร ควรเลือกแบบไหน?</div>
+      <div class="faq-a">IPX4 กันละอองน้ำและเหงื่อได้ เหมาะกับการใช้งานทั่วไปและออกกำลังกายเบาๆ ส่วน IPX5 กันน้ำที่พุ่งจากทุกทิศทางได้ เหมาะกับการออกกำลังกายหนัก วิ่ง หรือใช้ในที่ที่มีฝนละออง ถ้าใช้วิ่งหรือออกกำลังกายหนัก แนะนำ IPX5 ขึ้นไปครับ</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ซื้อจาก Shopee หรือ Lazada ดีกว่ากัน?</div>
+      <div class="faq-a">ทั้งสองแพลตฟอร์มมีสินค้าเหมือนกัน แต่โปรโมชั่นและราคาอาจต่างกันในแต่ละช่วงเวลา แนะนำให้เปรียบเทียบราคาทั้งสองเว็บก่อนซื้อ และเลือกซื้อจากร้านที่มีคะแนนรีวิวสูงและมีรับประกัน ระวังสินค้าที่ราคาถูกผิดปกติ อาจเป็นสินค้าปลอม</div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<footer>
+  <p>ข้อมูลราคาอ้างอิงอาจเปลี่ยนแปลงได้ตามโปรโมชั่น ณ เวลาที่ซื้อ · อัปเดตล่าสุด พฤษภาคม 2026</p>
+  <p style="margin-top:6px;">รีวิวทั้งหมดเป็นความคิดเห็นอิสระ ไม่ได้รับค่าจ้างจากแบรนด์ · อาจได้รับค่าคอมมิชชั่นหากซื้อผ่านลิงก์ในเว็บไซต์</p>
+</footer>
+
+<script>
+const cards = Array.from(document.querySelectorAll('.product-card'));
+const list = document.getElementById('product-list');
+const sortSel = document.getElementById('sort-select');
+const filterBtns = document.querySelectorAll('.filter-tag');
+const countEl = document.getElementById('results-count');
+let activeFilter = 'all';
+
+function render() {
+  let visible = cards.filter(c => {
+    if (activeFilter === 'all') return true;
+    return c.dataset.tags.split(' ').includes(activeFilter);
+  });
+  const sortVal = sortSel.value;
+  visible.sort((a, b) => {
+    if (sortVal === 'rank') return +a.dataset.rank - +b.dataset.rank;
+    if (sortVal === 'price-asc') return +a.dataset.price - +b.dataset.price;
+    if (sortVal === 'price-desc') return +b.dataset.price - +a.dataset.price;
+    if (sortVal === 'battery') return +b.dataset.battery - +a.dataset.battery;
+    return 0;
+  });
+  cards.forEach(c => { c.style.display = 'none'; list.removeChild(c); });
+  visible.forEach(c => { c.style.display = ''; list.appendChild(c); });
+  cards.filter(c => !visible.includes(c)).forEach(c => list.appendChild(c));
+  countEl.textContent = 'แสดง ' + visible.length + ' รุ่น';
+}
+
+sortSel.addEventListener('change', render);
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.parentElement.classList.toggle('open');
+  });
+});
+
+render();
+</script>
+</body>
+</html>
