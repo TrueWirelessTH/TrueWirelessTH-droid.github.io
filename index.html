@@ -3,1397 +3,259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>เปรียบเทียบ หูฟัง True Wireless ราคาไม่เกิน 1000 บาท 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>เปรียบดี | เปรียบเทียบสินค้าออนไลน์</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0f0f13;
-    --bg2: #16161e;
-    --bg3: #1e1e28;
-    --surface: #22222e;
-    --surface2: #2a2a38;
-    --accent: #f0a500;
-    --accent2: #ff6b35;
-    --text: #f0ede8;
-    --text2: #a09e9a;
-    --text3: #6b6968;
-    --green: #2ecc89;
-    --red: #e05252;
-    --blue: #5b9cf6;
-    --border: rgba(255,255,255,0.07);
-    --gold1: #f0a500;
-    --gold2: #c17f00;
-    --silver: #9fadb8;
-    --bronze: #c07a3a;
-  }
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#0a0a0f;--bg2:#111118;--surface:#1c1c24;--border:rgba(255,255,255,0.07);--text:#f0ede8;--text2:#9a9890;--text3:#55534f;--accent:#f5a623;--green:#2ecc89;--red:#e05252;--blue:#5b9cf6;}
+body{font-family:'Noto Sans Thai',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+a{text-decoration:none;color:inherit;}
+.page{display:none;} .page.active{display:block;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:12px;}
+.logo{font-size:18px;font-weight:800;letter-spacing:-0.5px;cursor:pointer;}
+.logo span{color:var(--accent);}
+.hdr-search{flex:1;max-width:360px;display:flex;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:7px 12px;gap:8px;}
+.hdr-search input{background:none;border:none;outline:none;color:var(--text);font-family:inherit;font-size:13px;width:100%;}
+.hdr-search input::placeholder{color:var(--text3);}
 
-  body {
-    font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 15px;
-  }
+/* HERO */
+.hero{padding:48px 20px 36px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(245,166,35,0.07) 0%,transparent 60%);border-bottom:1px solid var(--border);}
+.hero-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid rgba(245,166,35,0.3);background:rgba(245,166,35,0.08);padding:4px 14px;border-radius:20px;margin-bottom:16px;}
+.hero h1{font-size:clamp(24px,5vw,42px);font-weight:800;line-height:1.25;margin-bottom:12px;letter-spacing:-1px;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero p{font-size:14px;color:var(--text2);max-width:480px;margin:0 auto;}
 
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+/* CATEGORIES */
+.sec{padding:32px 20px;max-width:1100px;margin:0 auto;}
+.sec-title{font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.sec-title::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent);}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:36px;}
+.cat-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all 0.2s;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.cat-card:hover{border-color:rgba(245,166,35,0.4);transform:translateY(-2px);}
+.cat-icon{font-size:32px;}
+.cat-name{font-size:13px;font-weight:600;}
+.cat-sub{font-size:11px;color:var(--text3);line-height:1.5;}
 
-  /* HEADER */
-  .site-header {
-    background: var(--bg2);
-    border-bottom: 1px solid var(--border);
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .logo { font-weight: 700; font-size: 18px; color: var(--accent); letter-spacing: -0.5px; }
-  .breadcrumb { font-size: 12px; color: var(--text3); display: flex; gap: 6px; align-items: center; }
-  .breadcrumb span { color: var(--text3); }
+/* SUBPAGE */
+.sub-hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:24px 20px;}
+.sub-hdr-inner{max-width:1100px;margin:0 auto;}
+.back{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--text2);cursor:pointer;padding:5px 10px;border-radius:6px;border:1px solid var(--border);background:var(--surface);margin-bottom:12px;transition:all 0.15s;}
+.back:hover{color:var(--text);border-color:rgba(245,166,35,0.3);}
+.sub-hdr h1{font-size:clamp(18px,4vw,28px);font-weight:800;margin-bottom:4px;}
+.sub-hdr p{font-size:13px;color:var(--text2);}
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #0f0f13 0%, #1a1226 50%, #0f1520 100%);
-    padding: 56px 24px 40px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(240,165,0,0.08) 0%, transparent 60%);
-  }
-  .hero-tag {
-    display: inline-block;
-    background: rgba(240,165,0,0.15);
-    color: var(--accent);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    padding: 4px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(240,165,0,0.3);
-    margin-bottom: 18px;
-    text-transform: uppercase;
-  }
-  .hero h1 {
-    font-size: clamp(22px, 4vw, 34px);
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 14px;
-    position: relative;
-  }
-  .hero h1 span { color: var(--accent); }
-  .hero p {
-    font-size: 15px;
-    color: var(--text2);
-    max-width: 680px;
-    margin: 0 auto 24px;
-    line-height: 1.8;
-  }
-  .hero-meta {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    font-size: 12px;
-    color: var(--text3);
-    position: relative;
-  }
-  .hero-meta span { display: flex; align-items: center; gap: 5px; }
+/* SUB CATEGORY TABS */
+.sub-tabs{max-width:1100px;margin:0 auto;padding:16px 20px 0;display:flex;gap:8px;flex-wrap:wrap;}
+.sub-tab{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text2);transition:all 0.15s;}
+.sub-tab.on{background:rgba(245,166,35,0.12);border-color:rgba(245,166,35,0.35);color:var(--accent);}
 
-  /* TRUST BAR */
-  .trust-bar {
-    background: rgba(240,165,0,0.06);
-    border-bottom: 1px solid rgba(240,165,0,0.12);
-    padding: 12px 24px;
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    font-size: 12px;
-    color: var(--text2);
-    flex-wrap: wrap;
-  }
-  .trust-item { display: flex; align-items: center; gap: 6px; }
-  .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
+/* PRODUCT GRID */
+.prod-grid{max-width:1100px;margin:0 auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
+.prod-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all 0.2s;cursor:default;}
+.prod-card:hover{border-color:rgba(245,166,35,0.3);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+.prod-img{width:100%;height:150px;background:var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.prod-img img{width:100%;height:100%;object-fit:contain;padding:10px;}
+.prod-body{padding:12px;}
+.prod-name{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:10px;min-height:36px;}
+.prod-btns{display:flex;gap:6px;}
+.pbtn{flex:1;padding:6px 8px;border-radius:6px;font-size:11px;font-weight:600;text-align:center;cursor:pointer;font-family:inherit;border:1px solid;transition:all 0.15s;display:block;}
+.pbtn-s{background:rgba(255,87,34,0.1);color:#ff7550;border-color:rgba(255,87,34,0.25);}
+.pbtn-s:hover{background:rgba(255,87,34,0.2);}
+.pbtn-l{background:rgba(248,122,57,0.08);color:#f0a78b;border-color:rgba(248,122,57,0.2);}
+.pbtn-l:hover{background:rgba(248,122,57,0.18);}
 
-  /* LAYOUT */
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text3);line-height:2;margin-top:32px;}
 
-  /* TOC */
-  .toc {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 32px auto;
-    max-width: 1100px;
-  }
-  .toc-title { font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
-  .toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
-  .toc-links a {
-    font-size: 13px;
-    color: var(--text2);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 5px 12px;
-    border-radius: 6px;
-    transition: all 0.15s;
-  }
-  .toc-links a:hover { color: var(--accent); border-color: rgba(240,165,0,0.4); text-decoration: none; }
-
-  /* SECTION HEADERS */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 40px 0 20px;
-    padding: 0 20px;
-  }
-  .section-num {
-    width: 32px; height: 32px;
-    border-radius: 8px;
-    background: rgba(240,165,0,0.15);
-    border: 1px solid rgba(240,165,0,0.3);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 14px; color: var(--accent);
-    flex-shrink: 0;
-  }
-  .section-header h2 { font-size: 18px; font-weight: 600; }
-
-  /* FILTER/SORT TOOLBAR */
-  .toolbar {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px 20px;
-    margin: 20px;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .toolbar label { font-size: 13px; color: var(--text2); }
-  .toolbar select {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 28px 6px 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-family: inherit;
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a09e9a'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-  }
-  .filter-tag {
-    font-size: 12px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    cursor: pointer;
-    color: var(--text2);
-    transition: all 0.15s;
-    background: var(--surface);
-  }
-  .filter-tag.active { background: rgba(240,165,0,0.15); border-color: rgba(240,165,0,0.4); color: var(--accent); }
-  .results-count { margin-left: auto; font-size: 12px; color: var(--text3); }
-
-  /* SCORE BADGE (ปรับปรุงจากเดิม: เพิ่ม score คะแนน) */
-  .score-badge {
-    width: 48px; height: 48px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 15px;
-    flex-shrink: 0;
-  }
-  .score-s { background: rgba(46,204,137,0.15); color: var(--green); border: 2px solid rgba(46,204,137,0.3); }
-  .score-a { background: rgba(240,165,0,0.15); color: var(--accent); border: 2px solid rgba(240,165,0,0.3); }
-  .score-b { background: rgba(91,156,246,0.15); color: var(--blue); border: 2px solid rgba(91,156,246,0.3); }
-
-  /* PRODUCT CARDS */
-  .product-list { padding: 0 20px; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
-
-  .product-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 48px 80px 1fr auto;
-    gap: 16px;
-    align-items: start;
-    transition: border-color 0.2s;
-  }
-  .product-card:hover { border-color: rgba(240,165,0,0.25); }
-  .product-card.featured {
-    border-color: rgba(240,165,0,0.4);
-    background: linear-gradient(135deg, var(--bg2) 0%, rgba(240,165,0,0.04) 100%);
-  }
-
-  .rank-col { text-align: center; }
-  .rank-num { font-size: 22px; font-weight: 700; color: var(--text3); line-height: 1; }
-  .rank-num.gold { color: var(--gold1); }
-  .rank-num.silver { color: var(--silver); }
-  .rank-num.bronze { color: var(--bronze); }
-
-  .thumb-col {}
-  .thumb-col img {
-    width: 80px; height: 80px;
-    object-fit: contain;
-    border-radius: 10px;
-    background: var(--surface);
-    padding: 6px;
-    border: 1px solid var(--border);
-  }
-  .thumb-placeholder {
-    width: 80px; height: 80px;
-    border-radius: 10px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 28px;
-  }
-
-  .info-col {}
-  .brand-name { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 2px; }
-  .product-name { font-size: 16px; font-weight: 600; margin-bottom: 6px; line-height: 1.3; }
-  .product-tagline { font-size: 13px; color: var(--text2); margin-bottom: 12px; }
-
-  /* BADGES */
-  .badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
-  .badge {
-    font-size: 11px; font-weight: 500;
-    padding: 3px 9px;
-    border-radius: 5px;
-  }
-  .badge-bt { background: rgba(91,156,246,0.12); color: #7db4ff; border: 1px solid rgba(91,156,246,0.2); }
-  .badge-water { background: rgba(46,204,137,0.12); color: #5edcaa; border: 1px solid rgba(46,204,137,0.2); }
-  .badge-anc { background: rgba(180,100,240,0.12); color: #c07eff; border: 1px solid rgba(180,100,240,0.2); }
-  .badge-game { background: rgba(255,107,53,0.12); color: #ff8c5b; border: 1px solid rgba(255,107,53,0.2); }
-  .badge-warranty { background: rgba(160,158,154,0.1); color: var(--text2); border: 1px solid var(--border); }
-
-  /* SPECS MINI GRID (ปรับปรุง: แสดงสเปคในการ์ดเลย ไม่ต้องกด expand) */
-  .spec-mini {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 6px;
-    margin-top: 10px;
-  }
-  .spec-item {
-    background: var(--surface);
-    border-radius: 7px;
-    padding: 7px 10px;
-    border: 1px solid var(--border);
-  }
-  .spec-label { font-size: 10px; color: var(--text3); margin-bottom: 2px; font-weight: 500; }
-  .spec-value { font-size: 13px; font-weight: 500; color: var(--text); }
-  .spec-value.good { color: var(--green); }
-  .spec-value.warn { color: var(--accent); }
-
-  /* PROS/CONS (ปรับปรุง: เพิ่ม pros/cons ชัดเจน) */
-  .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-  .pros, .cons {
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-size: 12px;
-    line-height: 1.9;
-  }
-  .pros { background: rgba(46,204,137,0.07); border: 1px solid rgba(46,204,137,0.15); }
-  .cons { background: rgba(224,82,82,0.07); border: 1px solid rgba(224,82,82,0.15); }
-  .pros-title { font-weight: 600; color: var(--green); font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
-  .cons-title { font-weight: 600; color: var(--red); font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; }
-  .pros li, .cons li { list-style: none; padding-left: 14px; position: relative; color: var(--text2); }
-  .pros li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
-  .cons li::before { content: '✗'; position: absolute; left: 0; color: var(--red); }
-
-  /* PRICE + CTA col */
-  .cta-col { text-align: right; min-width: 120px; }
-  .price-label { font-size: 10px; color: var(--text3); margin-bottom: 3px; }
-  .price { font-size: 20px; font-weight: 700; color: var(--text); }
-  .price sub { font-size: 12px; color: var(--text2); }
-  .price-note { font-size: 10px; color: var(--text3); margin-bottom: 10px; }
-  .btn-buy {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s;
-    text-align: center;
-    font-family: inherit;
-    white-space: nowrap;
-  }
-  .btn-shopee { background: rgba(255,87,34,0.15); color: #ff7550; border: 1px solid rgba(255,87,34,0.3); margin-bottom: 6px; width: 100%; display: block; }
-  .btn-shopee:hover { background: rgba(255,87,34,0.25); text-decoration: none; }
-  .btn-lazada { background: rgba(248,122,57,0.1); color: #f0a78b; border: 1px solid rgba(248,122,57,0.25); width: 100%; display: block; }
-  .btn-lazada:hover { background: rgba(248,122,57,0.2); text-decoration: none; }
-
-  /* BEST FOR tag (ปรับปรุง: แนะนำว่าเหมาะกับใคร) */
-  .best-for {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(240,165,0,0.1);
-    border: 1px solid rgba(240,165,0,0.2);
-    border-radius: 5px;
-    padding: 4px 10px;
-    font-size: 11px;
-    color: var(--accent);
-    font-weight: 500;
-    margin-top: 8px;
-  }
-
-  /* FEATURED LABEL */
-  .featured-label {
-    display: inline-block;
-    background: var(--accent);
-    color: #000;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  /* COMPARISON TABLE (ปรับปรุง: sticky header, highlight ด้วยสี) */
-  .compare-wrapper {
-    margin: 0 20px 40px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    overflow: auto;
-  }
-  .compare-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    min-width: 720px;
-  }
-  .compare-table thead th {
-    background: var(--surface);
-    padding: 12px 14px;
-    text-align: left;
-    font-weight: 600;
-    font-size: 12px;
-    color: var(--text2);
-    border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 2;
-    white-space: nowrap;
-  }
-  .compare-table thead th:first-child { width: 130px; }
-  .compare-table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
-  .compare-table tbody tr:hover td { background: rgba(240,165,0,0.04); }
-  .compare-table td {
-    padding: 11px 14px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text2);
-    vertical-align: middle;
-  }
-  .compare-table td:first-child { color: var(--text); font-weight: 500; }
-  .compare-table td.best { color: var(--green); font-weight: 600; }
-  .compare-table td.yes::after { content: '✓'; color: var(--green); font-weight: 700; }
-  .compare-table td.no::after { content: '✗'; color: var(--red); }
-
-  /* BUYING GUIDE */
-  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 0 20px 40px; }
-  .guide-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px;
-  }
-  .guide-icon { font-size: 24px; margin-bottom: 10px; }
-  .guide-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-  .guide-card p { font-size: 13px; color: var(--text2); line-height: 1.7; }
-  .guide-tip { margin-top: 8px; font-size: 11px; color: var(--accent); font-weight: 500; padding: 5px 9px; background: rgba(240,165,0,0.08); border-radius: 5px; }
-
-  /* EXPERT BOX */
-  .expert-box {
-    margin: 0 20px 32px;
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    display: flex;
-    gap: 16px;
-  }
-  .expert-avatar {
-    width: 52px; height: 52px;
-    border-radius: 50%;
-    background: var(--surface2);
-    border: 2px solid rgba(240,165,0,0.3);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
-  .expert-role { font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; margin-bottom: 2px; }
-  .expert-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-  .expert-text { font-size: 13px; color: var(--text2); line-height: 1.8; }
-
-  /* FAQ */
-  .faq-list { margin: 0 20px 40px; display: flex; flex-direction: column; gap: 10px; }
-  .faq-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; }
-  .faq-q {
-    padding: 15px 18px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    user-select: none;
-  }
-  .faq-q::after { content: '＋'; color: var(--accent); font-size: 18px; transition: transform 0.2s; }
-  .faq-item.open .faq-q::after { content: '－'; }
-  .faq-a { padding: 0 18px 15px; font-size: 13px; color: var(--text2); line-height: 1.8; display: none; }
-  .faq-item.open .faq-a { display: block; }
-
-  /* FOOTER */
-  footer {
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    padding: 24px;
-    text-align: center;
-    font-size: 12px;
-    color: var(--text3);
-    line-height: 1.9;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 720px) {
-    .product-card { grid-template-columns: 40px 64px 1fr; }
-    .cta-col { grid-column: 1/-1; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-    .price { font-size: 16px; }
-    .btn-shopee, .btn-lazada { width: auto; display: inline-block; }
-    .pros-cons { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 480px) {
-    .product-card { grid-template-columns: 1fr; }
-    .rank-col, .thumb-col { display: flex; gap: 12px; align-items: center; }
-    .hero { padding: 36px 16px 28px; }
-    .toolbar { flex-direction: column; align-items: flex-start; }
-  }
+@media(max-width:500px){
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .prod-grid{grid-template-columns:repeat(2,1fr);padding:12px;}
+}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <span class="logo">🎧 EarPick</span>
-  <nav class="breadcrumb">
-    <a href="#">หน้าแรก</a>
-    <span>›</span>
-    <a href="#">อุปกรณ์ไอที</a>
-    <span>›</span>
-    <a href="#">หูฟัง</a>
-    <span>›</span>
-    <span style="color:var(--text2)">True Wireless ≤ 1000 บาท</span>
-  </nav>
+<header class="hdr">
+  <div class="logo" onclick="showPage('home')">เปรียบ<span>ดี</span></div>
+  <div class="hdr-search"><span>🔍</span><input type="text" placeholder="ค้นหาสินค้า..."></div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-tag">อัปเดต พฤษภาคม 2026</div>
-  <h1>10 <span>หูฟัง True Wireless</span><br>ราคาไม่เกิน 1,000 บาท</h1>
-  <p>เราทดสอบและเปรียบเทียบหูฟังไร้สายราคาประหยัดจาก 10 รุ่นยอดนิยม คัดสรรโดยทีมผู้เชี่ยวชาญ พร้อมตารางเปรียบเทียบสเปคและข้อดี-ข้อเสียครบถ้วน</p>
-  <div class="hero-meta">
-    <span>📅 อัปเดตล่าสุด: พ.ค. 2026</span>
-    <span>🎧 10 รุ่น</span>
-    <span>🔬 ทดสอบจริง</span>
-    <span>💰 ราคา 300–1,000 บาท</span>
+<!-- HOME -->
+<div id="home" class="page active">
+  <section class="hero">
+    <div class="hero-tag">อัปเดต พ.ค. 2026</div>
+    <h1>เลือกสินค้าดีที่สุด<br>ในราคา<em>ที่ใช่</em></h1>
+    <p>เปรียบเทียบสินค้าหลายหมวดหมู่ พร้อมลิงก์ซื้อ Shopee & Lazada</p>
+  </section>
+  <div class="sec">
+    <div class="sec-title">🗂️ เลือกหมวดหมู่</div>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="showPage('page-it')"><div class="cat-icon">💻</div><div class="cat-name">อุปกรณ์ไอที</div><div class="cat-sub">หูฟัง · คีย์บอร์ด<br>Power Bank · เมาส์</div></div>
+      <div class="cat-card" onclick="showPage('page-electric')"><div class="cat-icon">⚡</div><div class="cat-name">เครื่องใช้ไฟฟ้า</div><div class="cat-sub">แอร์ · ตู้เย็น<br>เครื่องซักผ้า · พัดลม</div></div>
+      <div class="cat-card" onclick="showPage('page-agri')"><div class="cat-icon">🌾</div><div class="cat-name">เครื่องมือเกษตร</div><div class="cat-sub">ตัดหญ้า · สูบน้ำ<br>พ่นยา · สีข้าว</div></div>
+    </div>
   </div>
-</section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><span class="trust-dot"></span> รีวิวอิสระ ไม่รับสปอนเซอร์</div>
-  <div class="trust-item"><span class="trust-dot"></span> ทดสอบเสียงจริง 30+ ชั่วโมง</div>
-  <div class="trust-item"><span class="trust-dot"></span> ตรวจสอบโดยผู้เชี่ยวชาญเสียง</div>
-  <div class="trust-item"><span class="trust-dot"></span> เปรียบเทียบราคาจาก Shopee & Lazada</div>
 </div>
 
-<div class="container">
-
-  <!-- TOC -->
-  <div class="toc">
-    <div class="toc-title">สารบัญ</div>
-    <div class="toc-links">
-      <a href="#guide">วิธีเลือกซื้อ</a>
-      <a href="#ranking">อันดับ 10 รุ่นยอดนิยม</a>
-      <a href="#compare">ตารางเปรียบเทียบ</a>
-      <a href="#faq">คำถามที่พบบ่อย</a>
-    </div>
+<!-- PAGE: อุปกรณ์ไอที -->
+<div id="page-it" class="page">
+  <div class="sub-hdr"><div class="sub-hdr-inner">
+    <div class="back" onclick="showPage('home')">← กลับหน้าแรก</div>
+    <h1>💻 อุปกรณ์ไอที</h1>
+    <p>หูฟัง True Wireless · คีย์บอร์ด Mechanical · Power Bank · เมาส์ไร้สาย · สมาร์ทวอทช์</p>
+  </div></div>
+  <div class="sub-tabs">
+    <button class="sub-tab on" onclick="filterCat('it','all',this)">ทั้งหมด</button>
+    <button class="sub-tab" onclick="filterCat('it','earphone',this)">🎧 หูฟัง</button>
+    <button class="sub-tab" onclick="filterCat('it','keyboard',this)">⌨️ คีย์บอร์ด</button>
+    <button class="sub-tab" onclick="filterCat('it','powerbank',this)">🔋 Power Bank</button>
+    <button class="sub-tab" onclick="filterCat('it','watch',this)">⌚ สมาร์ทวอทช์</button>
+    <button class="sub-tab" onclick="filterCat('it','mouse',this)">🖱️ เมาส์</button>
   </div>
-
-  <!-- EXPERT BOX -->
-  <div class="expert-box">
-    <div class="expert-avatar">🔍</div>
-    <div>
-      <div class="expert-role">แหล่งข้อมูลอ้างอิง</div>
-      <div class="expert-name">รวบรวมจากเว็บไซต์รีวิวชั้นนำ</div>
-      <div class="expert-text">ข้อมูลในหน้านี้รวบรวมและเปรียบเทียบจากหลายแหล่ง ได้แก่ GSMArena, Rtings.com, Notebookcheck, รีวิวผู้ใช้จริงบน Shopee และ Lazada รวมถึงข้อมูลจากเว็บไซต์ทางการของแต่ละแบรนด์ อัปเดตล่าสุด พฤษภาคม 2026</div>
-    </div>
+  <div class="prod-grid" id="grid-it">
+    <!-- หูฟัง -->
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7qul4-lff96kckmgp3dd.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">Soundcore A20i True Wireless</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/AKXXqg1O3L" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kpKg?c=b&t=p-i5Kj6FD-sMRPxRT" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztf-mkxjnsvc5r0g13.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">OPPO Enco Buds3</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/3VhDiJqnlD" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kpC5?c=a&t=p-i69nnfM-sQE7dOP" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/cn-11134207-7r98o-lr2qr6inxk19b9.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">Redmi Buds 5</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4qCbJJr6Qq" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kKTK?c=b&t=p-i5T6HC9-sN6xTG3" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/cn-11134207-820l4-mj3m5lmkdptwdd.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">Edifier X2 Plus True Wireless</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/5fliItLQVL" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kKP0?c=a&t=p-i5WVJmP-sNLSg1L" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134201-7rasl-m3a4bdup4yjsae.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">Baseus Bowie E16 TWS</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/6pxfh80fuf" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kqXW?t=p-iHXBRsq-s2E2WBRb" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztp-mllmo20hv5sf8c.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">REDMI Buds 8</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/70H5uCU4QM" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kqk0?c=a&t=p-iHY9QXs-s2EER0sp" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/cn-11134207-820l4-mez7thwwo0ega6.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">Soundcore R50i NC</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4VZkvopNxf" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kqL9?c=b&t=p-i5emFpg-sQxDWtQ" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://cdn.webshopapp.com/shops/300672/files/448943896/660x660x1/qcy-t20-aillypods.jpg" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">QCY AilyPods T20</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/40dUL0WvmU" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kqC3?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/cn-11134207-7ras8-m901vhic4fiq2f.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">VIVO iQOO TWS 1i</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/W3cAzaIop" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kJc7?c=b&t=p-i5rafnE-s2ElrBBX" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="earphone"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/cn-11134207-7ras8-m901vhic4fiq2f.webp" onerror="this.src='';this.parentElement.innerHTML='🎧'"></div><div class="prod-body"><div class="prod-name">Xiaomi Buds 6 Lite</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/20sPxr11SJ" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6kJVk?c=b&t=p-i6YKsCM-sSFe8Wo" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- คีย์บอร์ด -->
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztg-mk0sm71rixa9ab.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Keychron K2</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/2VoiCPngCV" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6O0AG?c=b&t=p-ieV3qT-sQvJRst" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztf-mm8kd7ouqscofc.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Royal Kludge RK61</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1qZ1PhPoiz" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6ObkM?c=a&t=p-i5hrpoH-sOERBGq" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-22110-zgb3rufbtgkv82.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Akko 3068B</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/902Bx6WPK9" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6ObL2?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7ra0h-md1gm42vvmfy5e.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Ajazz AK820</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1VwB1P2AFZ" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6ObIE?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztj-mo3k7tz7kiypdb.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Fantech Maxfit61</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/50W3Bvq82N" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6ObEy?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztm-mm1a7wdg89vm9b.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Redragon K617</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1gFbE69Qxv" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OY56?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-7rbla-lmfujie2mcb483.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Aula F75</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/2LVI1PMKzg" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OYiH?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134202-7rdxx-m014zlb6e7z9f7@resize_w450_nl.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Epomaker TH80</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/10zuR22qTJ" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OYnO?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7rasc-m226enn3katy72.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">Logitech G413</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/902Bxso8mG" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OYHm?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="keyboard"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134201-7r98u-ltw8kmjvfedn9a.webp" onerror="this.src='';this.parentElement.innerHTML='⌨️'"></div><div class="prod-body"><div class="prod-name">HyperX Alloy Origins</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/3VhFPnP2Jf" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OYG6?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- Power Bank -->
+    <div class="prod-card" data-cat="powerbank"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134258-7r98z-lza9f5c8o71l63" onerror="this.src='';this.parentElement.innerHTML='🔋'"></div><div class="prod-body"><div class="prod-name">Xiaomi 10000mAh 22.5W</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/5ApTPJXutC" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OXs0?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="powerbank"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-7qvfb-ljdy8d18hl3ae1.webp" onerror="this.src='';this.parentElement.innerHTML='🔋'"></div><div class="prod-body"><div class="prod-name">Eloop EW55</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/9Kf2Mzulbk" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OXH9?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="powerbank"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztq-mncrp1piy7eq3c.webp" onerror="this.src='';this.parentElement.innerHTML='🔋'"></div><div class="prod-body"><div class="prod-name">Baseus Bipow</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/7VDOBdsKv4" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OXGb?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="powerbank"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-23010-jkl2w2tj2emvaf.webp" onerror="this.src='';this.parentElement.innerHTML='🔋'"></div><div class="prod-body"><div class="prod-name">Aukey PB-Y36</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/2g88QlyZqJ" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OXuh?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="powerbank"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7rasa-m4a2mt6jp72vc4.webp" onerror="this.src='';this.parentElement.innerHTML='🔋'"></div><div class="prod-body"><div class="prod-name">Ugreen PB311</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/6pxhOTtKMv" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OXqq?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="powerbank"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81zti-megv7gsj0jyae8.webp" onerror="this.src='';this.parentElement.innerHTML='🔋'"></div><div class="prod-body"><div class="prod-name">Veger P15</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4AwwFCDCWM" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OXmN?c=a&t=p-i4bAxjq-sORQlse" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- สมาร์ทวอทช์ -->
+    <div class="prod-card" data-cat="watch"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98v-lw6x8td135jjc9.webp" onerror="this.src='';this.parentElement.innerHTML='⌚'"></div><div class="prod-body"><div class="prod-name">Xiaomi Smart Band 8</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/9fHsqeaEjv" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OWwq?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="watch"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7ras8-m0pj2xr4vs9k66.webp" onerror="this.src='';this.parentElement.innerHTML='⌚'"></div><div class="prod-body"><div class="prod-name">Huawei Band 8</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1qZ1WHX94W" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OWDR?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="watch"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98q-lqel1i4l9na2b3.webp" onerror="this.src='';this.parentElement.innerHTML='⌚'"></div><div class="prod-body"><div class="prod-name">Amazfit Bip 5</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/2LVI7DVngP" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OWDB?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="watch"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-7rcf8-ltkzukp1nc6384.webp" onerror="this.src='';this.parentElement.innerHTML='⌚'"></div><div class="prod-body"><div class="prod-name">Redmi Watch 3 Active</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/17NKwdWUP" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OWxj?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="watch"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134202-7rd6b-m7g9mujpkpnn5c.webp" onerror="this.src='';this.parentElement.innerHTML='⌚'"></div><div class="prod-body"><div class="prod-name">Haylou Solar Plus RT3</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/60OaU1P1d8" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OWEL?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- เมาส์ -->
+    <div class="prod-card" data-cat="mouse"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-8260u-mk27htateghsde.webp" onerror="this.src='';this.parentElement.innerHTML='🖱️'"></div><div class="prod-body"><div class="prod-name">Logitech M221 Silent</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/BQnVmEoB4" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OdGm?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mouse"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81zti-mlnfyn7pgnicaf@resize_w450_nl.webp" onerror="this.src='';this.parentElement.innerHTML='🖱️'"></div><div class="prod-body"><div class="prod-name">Logitech Pebble M350s</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/8pilpjH1Oh" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6Odtt?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mouse"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7rasa-m3dg4ysgkxy3d5.webp" onerror="this.src='';this.parentElement.innerHTML='🖱️'"></div><div class="prod-body"><div class="prod-name">Ugreen Wireless Mouse</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/809eqDoWEN" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OdHq?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mouse"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-7rave-ma7bzevzdea69b.webp" onerror="this.src='';this.parentElement.innerHTML='🖱️'"></div><div class="prod-body"><div class="prod-name">Xiaomi Dual Mode Mouse</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/8KmVErvJI3" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OdI7?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mouse"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/cn-11134207-7r98o-ltm4vq563qhpa9.webp" onerror="this.src='';this.parentElement.innerHTML='🖱️'"></div><div class="prod-body"><div class="prod-name">Delux M618C Vertical Mouse</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/gN47wODUA" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6OdKS?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
   </div>
+</div>
 
-  <!-- BUYING GUIDE -->
-  <div id="guide">
-    <div class="section-header">
-      <div class="section-num">1</div>
-      <h2>วิธีการเลือกหูฟัง True Wireless ราคาไม่เกิน 1,000 บาท</h2>
-    </div>
+<!-- PAGE: เครื่องใช้ไฟฟ้า -->
+<div id="page-electric" class="page">
+  <div class="sub-hdr"><div class="sub-hdr-inner">
+    <div class="back" onclick="showPage('home')">← กลับหน้าแรก</div>
+    <h1>⚡ เครื่องใช้ไฟฟ้า</h1>
+    <p>แอร์ · ตู้เย็น · เครื่องทำน้ำอุ่น · เครื่องซักผ้า · พัดลม</p>
+  </div></div>
+  <div class="sub-tabs">
+    <button class="sub-tab on" onclick="filterCat('electric','all',this)">ทั้งหมด</button>
+    <button class="sub-tab" onclick="filterCat('electric','ac',this)">❄️ แอร์</button>
+    <button class="sub-tab" onclick="filterCat('electric','fridge',this)">🧊 ตู้เย็น</button>
+    <button class="sub-tab" onclick="filterCat('electric','heater',this)">🚿 เครื่องทำน้ำอุ่น</button>
+    <button class="sub-tab" onclick="filterCat('electric','washer',this)">👕 เครื่องซักผ้า</button>
+    <button class="sub-tab" onclick="filterCat('electric','fan',this)">🌀 พัดลม</button>
   </div>
-  <div class="guide-grid">
-    <div class="guide-card">
-      <div class="guide-icon">📶</div>
-      <h3>เวอร์ชัน Bluetooth</h3>
-      <p>เลือกอย่างน้อย <strong>Bluetooth 5.2</strong> ขึ้นไปเพื่อการเชื่อมต่อเสถียร ดีเลย์ต่ำ และประหยัดแบตมากกว่าเวอร์ชันเก่า</p>
-      <div class="guide-tip">✓ แนะนำ: BT 5.2 หรือ 5.3</div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-icon">💧</div>
-      <h3>ระดับกันน้ำ IPX</h3>
-      <p>สำหรับออกกำลังกายเลือก <strong>IPX5 ขึ้นไป</strong> กันเหงื่อได้สบาย IPX4 กันละอองน้ำได้แต่ไม่เหมาะแล่น</p>
-      <div class="guide-tip">✓ ออกกำลังกาย: IPX5+</div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-icon">🔋</div>
-      <h3>อายุแบตเตอรี่</h3>
-      <p>ตัวหูฟังควรใช้ได้ <strong>อย่างน้อย 5–6 ชั่วโมง</strong> ต่อชาร์จ และรวมเคสชาร์จควรได้ 20+ ชั่วโมง</p>
-      <div class="guide-tip">✓ รวมเคส: 20+ ชม. ดีมาก</div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-icon">🎙️</div>
-      <h3>คุณภาพไมโครโฟน</h3>
-      <p>ใช้โทรศัพท์หรือประชุม เลือกรุ่นที่มี <strong>2+ ไมค์</strong> และระบบ ENC/CVC ตัดเสียงรบกวน ฝั่งตรงข้ามได้ยินชัด</p>
-      <div class="guide-tip">✓ ประชุมออนไลน์: 2 ไมค์+</div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-icon">🔊</div>
-      <h3>ขนาดไดรเวอร์</h3>
-      <p>ยิ่งใหญ่ยิ่งเบสแน่น แต่ไม่ใช่ทั้งหมด <strong>10–13 มม.</strong> เหมาะสำหรับเสียงสมดุล ฟังได้ทุกแนวเพลง</p>
-      <div class="guide-tip">✓ สมดุล: 10–12 มม.</div>
-    </div>
-    <div class="guide-card">
-      <div class="guide-icon">🎮</div>
-      <h3>Game Mode</h3>
-      <p>ถ้าเล่นเกมมือถือต้องการ <strong>Game Mode / Low Latency</strong> ที่ดีเลย์ต่ำกว่า 60ms ป้องกันเสียงหน่วงรบกวน</p>
-      <div class="guide-tip">✓ เกม: ดีเลย์ &lt; 60ms</div>
-    </div>
+  <div class="prod-grid" id="grid-electric">
+    <!-- แอร์ -->
+    <div class="prod-card" data-cat="ac"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztp-mlk3po62phq8b1.webp" onerror="this.src='';this.parentElement.innerHTML='❄️'"></div><div class="prod-body"><div class="prod-name">DAIKIN FTKQ-YV2S</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/7pqGHA54Eq" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oVPZ?t=p-i6d85Me-sSrCSju" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="ac"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81zto-mlkg09d38qo26b.webp" onerror="this.src='';this.parentElement.innerHTML='❄️'"></div><div class="prod-body"><div class="prod-name">Mitsubishi MSY-KA/KY</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4VZoJET8Lq" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oVHD?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="ac"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81zto-mk7yvyjpy1aa51.webp" onerror="this.src='';this.parentElement.innerHTML='❄️'"></div><div class="prod-body"><div class="prod-name">SAMSUNG Essential Inverter AR40H</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/2g8A868C0o" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6o40w?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="ac"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81zte-mncgnkawrchxa2.webp" onerror="this.src='';this.parentElement.innerHTML='❄️'"></div><div class="prod-body"><div class="prod-name">LG IBY SERIES</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/gN5kiZPnO" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6o44l?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="ac"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7ra0m-mda6g29tcin292.webp" onerror="this.src='';this.parentElement.innerHTML='❄️'"></div><div class="prod-body"><div class="prod-name">Panasonic YU-ZKT</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/50W4v0jLkH" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6o4Pb?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="ac"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7rasc-m8vgy5vq00o0c0.webp" onerror="this.src='';this.parentElement.innerHTML='❄️'"></div><div class="prod-body"><div class="prod-name">SHARP AH-X10BB J-Tech Inverter</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4VZoKHznAk" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6o4o5?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- ตู้เย็น -->
+    <div class="prod-card" data-cat="fridge"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-824ib-mdyuurfap5vnf3.webp" onerror="this.src='';this.parentElement.innerHTML='🧊'"></div><div class="prod-body"><div class="prod-name">Samsung 2 ประตู RT38CG6020B1ST</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1gFcoTeGEC" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oclJ?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="fridge"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-824g1-mdyt7283mmth77.webp" onerror="this.src='';this.parentElement.innerHTML='🧊'"></div><div class="prod-body"><div class="prod-name">Hitachi HRTN5255MPSVTH</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/9fHuLP7rXl" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6ocvN?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="fridge"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r992-lx0whrebzdm8e6.webp" onerror="this.src='';this.parentElement.innerHTML='🧊'"></div><div class="prod-body"><div class="prod-name">SHARP SJ-XP230T-DK</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/20sTDadBgA" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oXbT?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="fridge"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134211-81ztp-mjtpuzcdsrnp8d.webp" onerror="this.src='';this.parentElement.innerHTML='🧊'"></div><div class="prod-body"><div class="prod-name">MITSUBISHI MR-FC38ES</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1BJMEJrycM" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oXEh?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- เครื่องทำน้ำอุ่น -->
+    <div class="prod-card" data-cat="heater"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98q-lzfvt38nb7ghe3.webp" onerror="this.src='';this.parentElement.innerHTML='🚿'"></div><div class="prod-body"><div class="prod-name">Panasonic DH-3VL1TW 3500W</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/BQp6C44Lz" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6o3Tr?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="heater"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134201-7rasi-m1pvunijnbava3.webp" onerror="this.src='';this.parentElement.innerHTML='🚿'"></div><div class="prod-body"><div class="prod-name">HITACHI HES48G</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/40dXfQ3rvt" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6o391?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="heater"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98x-lo11041dtf1j9a.webp" onerror="this.src='';this.parentElement.innerHTML='🚿'"></div><div class="prod-body"><div class="prod-name">MEX COCO S45 4500W</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/6L1SSfDMZ9" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oe86?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- เครื่องซักผ้า -->
+    <div class="prod-card" data-cat="washer"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-822y6-mibiciuwq13a56.webp" onerror="this.src='';this.parentElement.innerHTML='👕'"></div><div class="prod-body"><div class="prod-name">Samsung WW90T4040CE</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1VwCZWkqw4" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6MzI7?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="washer"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-7rdwz-lxuqj5aq09l646.webp" onerror="this.src='';this.parentElement.innerHTML='👕'"></div><div class="prod-body"><div class="prod-name">LG FB1207S6W</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4ftELgkWf4" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oajM?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="washer"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztk-mkbvp0pizp5376.webp" onerror="this.src='';this.parentElement.innerHTML='👕'"></div><div class="prod-body"><div class="prod-name">Panasonic NA-F13AR1HRC</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/gN5aa6gfR" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6oZGh?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- พัดลม -->
+    <div class="prod-card" data-cat="fan"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98s-lxj9aepozv0v29.webp" onerror="this.src='';this.parentElement.innerHTML='🌀'"></div><div class="prod-body"><div class="prod-name">Hatari P16R1 16 นิ้ว</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/30l0DWyqg9" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6MVjg?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="fan"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztj-mm04teouc64k91.webp" onerror="this.src='';this.parentElement.innerHTML='🌀'"></div><div class="prod-body"><div class="prod-name">Xiaomi Smart Standing Fan 2 Lite</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/5ApUnFfSru" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6Mene?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="fan"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztd-mmig0rjnrmyrb1.webp" onerror="this.src='';this.parentElement.innerHTML='🌀'"></div><div class="prod-body"><div class="prod-name">Mitsubishi 16 นิ้ว R16-GC</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/5q5Ba7H11X" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6M35c?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
   </div>
+</div>
 
-  <!-- FILTER TOOLBAR -->
-  <div id="ranking">
-    <div class="section-header">
-      <div class="section-num">2</div>
-      <h2>10 อันดับหูฟัง True Wireless ยอดนิยม</h2>
-    </div>
+<!-- PAGE: เครื่องมือเกษตร -->
+<div id="page-agri" class="page">
+  <div class="sub-hdr"><div class="sub-hdr-inner">
+    <div class="back" onclick="showPage('home')">← กลับหน้าแรก</div>
+    <h1>🌾 เครื่องมือการเกษตร</h1>
+    <p>เครื่องตัดหญ้า · เครื่องสูบน้ำ · เครื่องพ่นยา · เครื่องนวดข้าว</p>
+  </div></div>
+  <div class="sub-tabs">
+    <button class="sub-tab on" onclick="filterCat('agri','all',this)">ทั้งหมด</button>
+    <button class="sub-tab" onclick="filterCat('agri','mower',this)">🌿 ตัดหญ้า</button>
+    <button class="sub-tab" onclick="filterCat('agri','pump',this)">💧 สูบน้ำ</button>
+    <button class="sub-tab" onclick="filterCat('agri','sprayer',this)">🌱 พ่นยา</button>
+    <button class="sub-tab" onclick="filterCat('agri','rice',this)">🌾 นวดข้าว</button>
   </div>
-
-  <div class="toolbar">
-    <label>เรียงโดย</label>
-    <select id="sort-select">
-      <option value="rank">ความนิยม</option>
-      <option value="price-asc">ราคา: ต่ำ → สูง</option>
-      <option value="price-desc">ราคา: สูง → ต่ำ</option>
-      <option value="battery">แบตเตอรี่นาน</option>
-    </select>
-    <label>กรองตาม</label>
-    <button class="filter-tag active" data-filter="all">ทั้งหมด</button>
-    <button class="filter-tag" data-filter="anc">มี ANC</button>
-    <button class="filter-tag" data-filter="game">Game Mode</button>
-    <button class="filter-tag" data-filter="ipx5">IPX5+</button>
-    <span class="results-count" id="results-count">แสดง 10 รุ่น</span>
+  <div class="prod-grid" id="grid-agri">
+    <!-- ตัดหญ้า -->
+    <div class="prod-card" data-cat="mower"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98p-ly1qpevk0mnkfb.webp" onerror="this.src='';this.parentElement.innerHTML='🌿'"></div><div class="prod-body"><div class="prod-name">Honda UMK435T</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/6feKHyCqnM" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6KbqV?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mower"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81zth-mg3cz7omszdabb.webp" onerror="this.src='';this.parentElement.innerHTML='🌿'"></div><div class="prod-body"><div class="prod-name">Kawasaki TJ45E</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/7AaatMmroS" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6KY4G?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mower"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r992-lwtup3smrt806d.webp" onerror="this.src='';this.parentElement.innerHTML='🌿'"></div><div class="prod-body"><div class="prod-name">HUSQVARNA 541RS</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/AAECT5UkdW" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6KYNk?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="mower"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7qul6-lipagb7wf1ew64.webp" onerror="this.src='';this.parentElement.innerHTML='🌿'"></div><div class="prod-body"><div class="prod-name">STIHL FS-55</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1VwE9yVjPQ" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6KX2N?t=p-i1mszlj-s2EZS2Q2" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- สูบน้ำ -->
+    <div class="prod-card" data-cat="pump"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7rasm-m5y19msk19gqdf.webp" onerror="this.src='';this.parentElement.innerHTML='💧'"></div><div class="prod-body"><div class="prod-name">GRUNDFOS CMB3-46PT</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1BJNmxqgGg" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6K3YX?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="pump"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r992-m0a1ocofhha268.webp" onerror="this.src='';this.parentElement.innerHTML='💧'"></div><div class="prod-body"><div class="prod-name">HONDA WB20XT</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/9ALfKFcggn" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6K3xf?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="pump"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7ra0p-mcvmtdvbzcow7b.webp" onerror="this.src='';this.parentElement.innerHTML='💧'"></div><div class="prod-body"><div class="prod-name">MITSUBISHI WP-205 R2</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/2VolOMyxmu" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6Kesm?t=p-i6M7Olq-sR3tI5K" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- พ่นยา -->
+    <div class="prod-card" data-cat="sprayer"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztq-mny3a9jkplaa1a.webp" onerror="this.src='';this.parentElement.innerHTML='🌱'"></div><div class="prod-body"><div class="prod-name">SOLO รุ่น 425 ถังพ่นยา</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/4ftG1vVVeI" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6KgYG?t=p-i5pQRNb-sOm2T5k" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="sprayer"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7r98y-lrsdopvqa5pq81.webp" onerror="this.src='';this.parentElement.innerHTML='🌱'"></div><div class="prod-body"><div class="prod-name">MAXIMUM เครื่องพ่นยา 8 แรง</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/902FCAlk9t" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6Kgw5?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="sprayer"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztc-mkaelura0g79e2.webp" onerror="this.src='';this.parentElement.innerHTML='🌱'"></div><div class="prod-body"><div class="prod-name">เครื่องพ่นยาแบตเตอรี่ 16-20L</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/50W6S74TJ3" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6Khb2?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <!-- นวดข้าว -->
+    <div class="prod-card" data-cat="rice"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/sg-11134201-820l5-mnb72r4ifcoz05.webp" onerror="this.src='';this.parentElement.innerHTML='🌾'"></div><div class="prod-body"><div class="prod-name">เครื่องสีข้าวเปลือกอเนกประสงค์</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/6pxpFqnWh3" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6FHuQ?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="rice"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-7rasm-m71rq56lealrf7.webp" onerror="this.src='';this.parentElement.innerHTML='🌾'"></div><div class="prod-body"><div class="prod-name">เครื่องสีข้าวไอเทค กรีน เพาเวอร์</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/1LcshmrZvn" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6FLGh?c=a" target="_blank" rel="nofollow">Lazada</a></div></div></div>
+    <div class="prod-card" data-cat="rice"><div class="prod-img"><img src="https://down-th.img.susercontent.com/file/th-11134207-81ztk-mnmdeqelov0o6c.webp" onerror="this.src='';this.parentElement.innerHTML='🌾'"></div><div class="prod-body"><div class="prod-name">เครื่องสีข้าวกล้องไชโย RED GOLD</div><div class="prod-btns"><a class="pbtn pbtn-s" href="https://s.shopee.co.th/5L91TEvrCH" target="_blank" rel="nofollow">Shopee</a><a class="pbtn pbtn-l" href="https://s.lazada.co.th/s.Z6Flsz?c=b" target="_blank" rel="nofollow">Lazada</a></div></div></div>
   </div>
-
-  <!-- PRODUCT LIST -->
-  <div class="product-list" id="product-list">
-    <!-- #1 Soundcore A20i True Wireless -->
-    <div class="product-card featured" data-rank="1" data-price="790" data-battery="6" data-tags="ipx5">
-      <div class="rank-col">
-        <div class="rank-num gold">1</div>
-        <div class="score-badge score-s" style="margin:6px auto 0;">9.2</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="featured-label">⭐ แนะนำอันดับ 1</div>
-        <div class="brand-name">Soundcore</div>
-        <div class="product-name">A20i True Wireless</div>
-        <div class="product-tagline">เสียงสมดุล น้ำหนักเบา ราคาคุ้มค่า เชื่อมต่อเสถียร</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IPX5</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">6 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">30 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
-          <div class="spec-item"><div class="spec-label">Codec</div><div class="spec-value">AAC</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>เสียงสมดุลทุกความถี่</li>
-              <li>น้ำหนักเบามาก</li>
-              <li>เชื่อมต่อรวดเร็ว</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ไม่มี ANC</li>
-              <li>ไม่มี Game Mode</li>
-              <li>ดีไซน์เรียบไม่โดดเด่น</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">🎵 เหมาะสำหรับ: ฟังเพลงทั่วไป / ใช้งานประจำวัน</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿790</div>
-        <div class="price-note">คุ้มค่ามาก</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/AKXXqg1O3L" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kpKg?c=b&t=p-i5Kj6FD-sMRPxRT" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #2 OPPO Enco Buds3 -->
-    <div class="product-card" data-rank="2" data-price="890" data-battery="6" data-tags="ipx5">
-      <div class="rank-col">
-        <div class="rank-num silver">2</div>
-        <div class="score-badge score-a" style="margin:6px auto 0;">8.9</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">OPPO</div>
-        <div class="product-name">Enco Buds3</div>
-        <div class="product-tagline">AI ตัดเสียงรบกวน เสียงชัด แบตอึด รุ่นล่าสุดจาก OPPO</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IPX5</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value good">7 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">30 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value">2 ตัว</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>AI ตัดเสียงรบกวนไมค์</li>
-              <li>แบต 7 ชม. ยาวนาน</li>
-              <li>BT 5.3 เวอร์ชันใหม่</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ไม่มี ANC</li>
-              <li>ไม่มี Game Mode</li>
-              <li>ราคาสูงกว่าคู่แข่ง</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">📞 เหมาะสำหรับ: โทรศัพท์ / ประชุมออนไลน์</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿890</div>
-        <div class="price-note">คุณภาพดีเกินราคา</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/3VhDiJqnlD" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kpC5?c=a&t=p-i69nnfM-sQE7dOP" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #3 Redmi Buds 5 -->
-    <div class="product-card" data-rank="3" data-price="950" data-battery="6" data-tags="anc">
-      <div class="rank-col">
-        <div class="rank-num bronze">3</div>
-        <div class="score-badge score-a" style="margin:6px auto 0;">8.6</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">Redmi</div>
-        <div class="product-name">Buds 5</div>
-        <div class="product-tagline">ANC 46dB เสียงดี ตัดเสียงดีที่สุดในราคานี้</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IPX4</span>
-          <span class="badge badge-anc">ANC</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value good">9 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">36 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ANC</div><div class="spec-value good">46 dB</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value good">12.4 มม.</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>ANC 46dB ดีที่สุดในราคา</li>
-              <li>แบต 9 ชม. ยาวมาก</li>
-              <li>ไดรเวอร์ใหญ่ 12.4mm</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>IPX4 กันน้ำน้อย</li>
-              <li>BT codec ไม่ระบุ</li>
-              <li>อาจหนักกว่ารุ่นอื่น</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">🚇 เหมาะสำหรับ: ใช้บนรถไฟฟ้า / สถานที่เสียงดัง</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿950</div>
-        <div class="price-note">ฟีเจอร์คุ้มมาก</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/4qCbJJr6Qq" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kKTK?c=b&t=p-i5T6HC9-sN6xTG3" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #4 Edifier X2 Plus True Wireless -->
-    <div class="product-card" data-rank="4" data-price="790" data-battery="6" data-tags="game ipx5">
-      <div class="rank-col">
-        <div class="rank-num">4</div>
-        <div class="score-badge score-a" style="margin:6px auto 0;">8.3</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">Edifier</div>
-        <div class="product-name">X2 Plus True Wireless</div>
-        <div class="product-tagline">ไดรเวอร์ใหญ่ 13mm ทรง Earbuds เปิด ฟังสบายทั้งวัน</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IP55</span>
-          <span class="badge badge-game">Game Mode</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">7 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value good">13 มม.</div></div>
-          <div class="spec-item"><div class="spec-label">รูปทรง</div><div class="spec-value">Earbuds</div></div>
-          <div class="spec-item"><div class="spec-label">กันน้ำ</div><div class="spec-value good">IP55</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>ไดรเวอร์ใหญ่ 13mm เบสแน่น</li>
-              <li>ทรง Earbuds สวมสบาย</li>
-              <li>มี Game Mode</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ไม่มี ANC</li>
-              <li>เสียงแหลมด้อยกว่า</li>
-              <li>ดีไซน์เรียบ</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">👂 เหมาะสำหรับ: ชอบทรง Earbuds / เล่นเกม</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿790</div>
-        <div class="price-note">ราคาดี</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/5fliItLQVL" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kKP0?c=a&t=p-i5WVJmP-sNLSg1L" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #5 Baseus Bowie E16 TWS True Wireless -->
-    <div class="product-card" data-rank="5" data-price="750" data-battery="6" data-tags="ipx5">
-      <div class="rank-col">
-        <div class="rank-num">5</div>
-        <div class="score-badge score-a" style="margin:6px auto 0;">8.1</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">Baseus</div>
-        <div class="product-name">Bowie E16 TWS True Wireless</div>
-        <div class="product-tagline">ดีไซน์สวย เสียงดี ไมค์ AI 4 ตัว คุ้มทุกบาท</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IPX5</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">6 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value good">4 ตัว</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value">24 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">11 มม.</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>ไมค์ 4 ตัว คุยชัดมาก</li>
-              <li>ดีไซน์พรีเมียมเกินราคา</li>
-              <li>IPX5 กันน้ำดี</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ไม่มี ANC</li>
-              <li>ไม่มี Game Mode</li>
-              <li>แบรนด์ไม่ค่อยเป็นที่รู้จัก</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">📱 เหมาะสำหรับ: โทรศัพท์บ่อย / ดีไซน์สวย</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿750</div>
-        <div class="price-note">คุ้มค่า</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/6pxfh80fuf" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kqXW?t=p-iHXBRsq-s2E2WBRb" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #6 REDMI Buds 8 -->
-    <div class="product-card" data-rank="6" data-price="990" data-battery="6" data-tags="anc">
-      <div class="rank-col">
-        <div class="rank-num">6</div>
-        <div class="score-badge score-b" style="margin:6px auto 0;">7.9</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">REDMI</div>
-        <div class="product-name">Buds 8</div>
-        <div class="product-tagline">ANC 35dB รุ่นใหม่ล่าสุด ดีไซน์ทันสมัย แบตอึด</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.4</span>
-          <span class="badge badge-water">IP54</span>
-          <span class="badge badge-anc">ANC</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value good">8 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value good">32 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ANC</div><div class="spec-value">35 dB</div></div>
-          <div class="spec-item"><div class="spec-label">BT</div><div class="spec-value good">5.4</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>BT 5.4 ใหม่ที่สุด</li>
-              <li>แบต 8 ชม. อึดมาก</li>
-              <li>มี ANC</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>IP54 กันน้ำปานกลาง</li>
-              <li>ราคาค่อนข้างสูง</li>
-              <li>ไม่มี Game Mode</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">🔇 เหมาะสำหรับ: ต้องการ ANC / ใช้นาน</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿990</div>
-        <div class="price-note">&nbsp;</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/70H5uCU4QM" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kqk0?c=a&t=p-iHY9QXs-s2EER0sp" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #7 Soundcore R50i NC -->
-    <div class="product-card" data-rank="7" data-price="550" data-battery="6" data-tags="anc ipx5">
-      <div class="rank-col">
-        <div class="rank-num">7</div>
-        <div class="score-badge score-b" style="margin:6px auto 0;">7.7</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">Soundcore</div>
-        <div class="product-name">R50i NC</div>
-        <div class="product-tagline">ANC ในงบ 500 บาท! ตัดเสียงได้น่าทึ่ง</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IPX5</span>
-          <span class="badge badge-anc">ANC</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">6 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value">28 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ANC</div><div class="spec-value good">มี</div></div>
-          <div class="spec-item"><div class="spec-label">ราคา</div><div class="spec-value good">~500 บาท</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>ANC ราคาถูกที่สุด</li>
-              <li>IPX5 กันเหงื่อดี</li>
-              <li>BT 5.3</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ANC ประสิทธิภาพปานกลาง</li>
-              <li>เสียงไม่ละเอียดมาก</li>
-              <li>ดีไซน์เรียบ</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">💸 เหมาะสำหรับ: งบน้อยอยากได้ ANC</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿550</div>
-        <div class="price-note">ราคาดีที่สุด!</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/4VZkvopNxf" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kqL9?c=b&t=p-i5emFpg-sQxDWtQ" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #8 QCY AilyPods T20 -->
-    <div class="product-card" data-rank="8" data-price="599" data-battery="6" data-tags="game">
-      <div class="rank-col">
-        <div class="rank-num">8</div>
-        <div class="score-badge score-b" style="margin:6px auto 0;">7.5</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">QCY</div>
-        <div class="product-name">AilyPods T20</div>
-        <div class="product-tagline">ดีเลย์ต่ำ 68ms ทรง Earbuds เปิด ไดรเวอร์ LCP 13mm</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IPX4</span>
-          <span class="badge badge-game">Game Mode</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">5.5 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ดีเลย์</div><div class="spec-value good">68ms</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value good">13 มม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไมโครโฟน</div><div class="spec-value">2 ตัว</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>ดีเลย์ต่ำ 68ms เกม ดีมาก</li>
-              <li>ไดรเวอร์ใหญ่ 13mm</li>
-              <li>ทรง Earbuds สวมสบาย</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>IPX4 กันน้ำน้อย</li>
-              <li>แบต 5.5 ชม. พอใช้</li>
-              <li>ไม่มี ANC</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">🎮 เหมาะสำหรับ: เล่นเกมมือถือ</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿599</div>
-        <div class="price-note">&nbsp;</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/40dUL0WvmU" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kqC3?c=b" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #9 VIVO iQOO TWS 1i -->
-    <div class="product-card" data-rank="9" data-price="590" data-battery="6" data-tags="">
-      <div class="rank-col">
-        <div class="rank-num">9</div>
-        <div class="score-badge score-b" style="margin:6px auto 0;">7.3</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">VIVO</div>
-        <div class="product-name">iQOO TWS 1i</div>
-        <div class="product-tagline">เสียงดี แบตอึด ราคาถูก เหมาะผู้ใช้ VIVO</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.3</span>
-          <span class="badge badge-water">IP54</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">6 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">รวมเคส</div><div class="spec-value">24 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
-          <div class="spec-item"><div class="spec-label">กันน้ำ</div><div class="spec-value">IP54</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>ราคาถูก คุ้มค่า</li>
-              <li>เสียงสมดุล</li>
-              <li>เชื่อมต่อไว</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ไม่มี ANC</li>
-              <li>ไม่มี Game Mode</li>
-              <li>IP54 กันน้ำน้อย</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">📱 เหมาะสำหรับ: ผู้ใช้ VIVO / งบน้อย</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿590</div>
-        <div class="price-note">&nbsp;</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/W3cAzaIop" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kJc7?c=b&t=p-i5rafnE-s2ElrBBX" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-    <!-- #10 Xiaomi Buds 6 Lite -->
-    <div class="product-card" data-rank="10" data-price="890" data-battery="6" data-tags="">
-      <div class="rank-col">
-        <div class="rank-num">10</div>
-        <div class="score-badge score-b" style="margin:6px auto 0;">7.1</div>
-      </div>
-      <div class="thumb-col">
-        <div class="thumb-placeholder">🎧</div>
-      </div>
-      <div class="info-col">
-        <div class="brand-name">Xiaomi</div>
-        <div class="product-name">Buds 6 Lite</div>
-        <div class="product-tagline">ดีไซน์เรียบหรู เสียงดี รุ่นล่าสุดจาก Xiaomi ราคาย่อมเยา</div>
-        <div class="badges">
-          <span class="badge badge-bt">BT 5.4</span>
-          <span class="badge badge-water">IP54</span>
-          <span class="badge badge-warranty">รับประกัน 1 ปี</span>
-        </div>
-        <div class="spec-mini">
-          <div class="spec-item"><div class="spec-label">แบตหูฟัง</div><div class="spec-value">6 ชม.</div></div>
-          <div class="spec-item"><div class="spec-label">BT</div><div class="spec-value good">5.4</div></div>
-          <div class="spec-item"><div class="spec-label">ไดรเวอร์</div><div class="spec-value">10 มม.</div></div>
-          <div class="spec-item"><div class="spec-label">กันน้ำ</div><div class="spec-value">IP54</div></div>
-        </div>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">จุดเด่น</div>
-            <ul>
-              <li>BT 5.4 ล่าสุด</li>
-              <li>ดีไซน์พรีเมียม</li>
-              <li>แบรนด์น่าเชื่อถือ</li>
-            </ul>
-          </div>
-          <div class="cons">
-            <div class="cons-title">จุดด้อย</div>
-            <ul>
-              <li>ไม่มี ANC</li>
-              <li>ไม่มี Game Mode</li>
-              <li>IP54 กันน้ำน้อย</li>
-            </ul>
-          </div>
-        </div>
-        <div class="best-for">📱 เหมาะสำหรับ: ผู้ใช้ Xiaomi / ดีไซน์สวย</div>
-      </div>
-      <div class="cta-col">
-        <div class="price-label">ราคาอ้างอิง</div>
-        <div class="price">฿890</div>
-        <div class="price-note">&nbsp;</div>
-        <a class="btn-buy btn-shopee" href="https://s.shopee.co.th/20sPxr11SJ" target="_blank" rel="nofollow">Shopee</a>
-        <a class="btn-buy btn-lazada" href="https://s.lazada.co.th/s.Z6kJVk?c=b&t=p-i6YKsCM-sSFe8Wo" target="_blank" rel="nofollow">Lazada</a>
-      </div>
-    </div>
-
-  </div><!-- end product-list -->
-
-  <!-- COMPARE TABLE -->
-  <div id="compare">
-    <div class="section-header">
-      <div class="section-num">3</div>
-      <h2>ตารางเปรียบเทียบสเปคครบถ้วน</h2>
-    </div>
-  </div>
-  <div class="compare-wrapper">
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>รุ่น</th>
-          <th>ราคา</th>
-          <th>BT</th>
-          <th>แบตฯ (ชม.)</th>
-          <th>รวมเคส</th>
-          <th>กันน้ำ</th>
-          <th>ไดรเวอร์</th>
-          <th>ไมค์</th>
-          <th>ANC</th>
-          <th>Game Mode</th>
-          <th>ประกัน</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Soundcore A20i True Wireless</td>
-          <td>฿790</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>OPPO Enco Buds3</td>
-          <td>฿890</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>Redmi Buds 5</td>
-          <td>฿950</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="yes"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>Edifier X2 Plus True Wireless</td>
-          <td>฿790</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="yes"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>Baseus Bowie E16 TWS True Wireless</td>
-          <td>฿750</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>REDMI Buds 8</td>
-          <td>฿990</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="yes"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>Soundcore R50i NC</td>
-          <td>฿550</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="yes"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>QCY AilyPods T20</td>
-          <td>฿599</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="yes"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>VIVO iQOO TWS 1i</td>
-          <td>฿590</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-        <tr>
-          <td>Xiaomi Buds 6 Lite</td>
-          <td>฿890</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="no"></td>
-          <td class="no"></td>
-          <td>1 ปี</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- FAQ -->
-  <div id="faq">
-    <div class="section-header">
-      <div class="section-num">4</div>
-      <h2>คำถามที่พบบ่อย</h2>
-    </div>
-  </div>
-  <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">หูฟัง True Wireless ต่างจากหูฟัง Wireless ทั่วไปอย่างไร?</div>
-      <div class="faq-a">หูฟัง Wireless ทั่วไปมักมีสายเชื่อมระหว่างหูฟังสองข้าง แต่ True Wireless (TWS) ไม่มีสายเลยแม้แต่น้อย แต่ละข้างทำงานอิสระและเชื่อมต่อกับโทรศัพท์แยกกัน ทำให้สะดวกและเสรีภาพในการเคลื่อนไหวมากกว่า แลกกับแบตเตอรี่ที่อาจสั้นกว่าเล็กน้อย</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">ANC สำคัญแค่ไหนสำหรับหูฟังราคาไม่เกิน 1,000 บาท?</div>
-      <div class="faq-a">ANC (Active Noise Cancelling) ในราคานี้มักไม่ได้ประสิทธิภาพสูงมากเท่าหูฟังระดับพรีเมียม แต่ก็ช่วยลดเสียงรบกวนคงที่ (เครื่องปรับอากาศ, เสียงรถ) ได้พอสมควร ถ้าต้องใช้บนรถไฟฟ้าหรือคาเฟ่เสียงดัง ANC มีประโยชน์ แต่ถ้าใช้ในบ้านหรือออกกำลังกายก็ไม่จำเป็นมาก</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">ราคาไม่เกิน 1,000 บาท หูฟังเสียงดีได้จริงไหม?</div>
-      <div class="faq-a">ได้จริงครับ! ตลาดหูฟัง TWS ในปัจจุบันแข่งขันสูงมาก แบรนด์อย่าง OPPO, SOUNDPEATS, realme สามารถให้คุณภาพเสียงที่ดีเกินราคาได้ในช่วง 400–1,000 บาท คีย์หลักคือเลือกรุ่นที่ตอบโจทย์การใช้งานของคุณโดยเฉพาะ</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">IPX4 กับ IPX5 ต่างกันอย่างไร ควรเลือกแบบไหน?</div>
-      <div class="faq-a">IPX4 กันละอองน้ำและเหงื่อได้ เหมาะกับการใช้งานทั่วไปและออกกำลังกายเบาๆ ส่วน IPX5 กันน้ำที่พุ่งจากทุกทิศทางได้ เหมาะกับการออกกำลังกายหนัก วิ่ง หรือใช้ในที่ที่มีฝนละออง ถ้าใช้วิ่งหรือออกกำลังกายหนัก แนะนำ IPX5 ขึ้นไปครับ</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">ซื้อจาก Shopee หรือ Lazada ดีกว่ากัน?</div>
-      <div class="faq-a">ทั้งสองแพลตฟอร์มมีสินค้าเหมือนกัน แต่โปรโมชั่นและราคาอาจต่างกันในแต่ละช่วงเวลา แนะนำให้เปรียบเทียบราคาทั้งสองเว็บก่อนซื้อ และเลือกซื้อจากร้านที่มีคะแนนรีวิวสูงและมีรับประกัน ระวังสินค้าที่ราคาถูกผิดปกติ อาจเป็นสินค้าปลอม</div>
-    </div>
-  </div>
-
-</div><!-- end container -->
+</div>
 
 <footer>
-  <p>ข้อมูลราคาอ้างอิงอาจเปลี่ยนแปลงได้ตามโปรโมชั่น ณ เวลาที่ซื้อ · อัปเดตล่าสุด พฤษภาคม 2026</p>
-  <p style="margin-top:6px;">รีวิวทั้งหมดเป็นความคิดเห็นอิสระ ไม่ได้รับค่าจ้างจากแบรนด์ · อาจได้รับค่าคอมมิชชั่นหากซื้อผ่านลิงก์ในเว็บไซต์</p>
+  <p>ข้อมูลราคาอ้างอิงอาจเปลี่ยนแปลงตามโปรโมชั่น · อัปเดตล่าสุด พฤษภาคม 2026</p>
+  <p>รวบรวมจาก Shopee & Lazada · อาจได้รับค่าคอมมิชชั่นหากซื้อผ่านลิงก์ในเว็บไซต์</p>
 </footer>
 
 <script>
-const cards = Array.from(document.querySelectorAll('.product-card'));
-const list = document.getElementById('product-list');
-const sortSel = document.getElementById('sort-select');
-const filterBtns = document.querySelectorAll('.filter-tag');
-const countEl = document.getElementById('results-count');
-let activeFilter = 'all';
-
-function render() {
-  let visible = cards.filter(c => {
-    if (activeFilter === 'all') return true;
-    return c.dataset.tags.split(' ').includes(activeFilter);
-  });
-  const sortVal = sortSel.value;
-  visible.sort((a, b) => {
-    if (sortVal === 'rank') return +a.dataset.rank - +b.dataset.rank;
-    if (sortVal === 'price-asc') return +a.dataset.price - +b.dataset.price;
-    if (sortVal === 'price-desc') return +b.dataset.price - +a.dataset.price;
-    if (sortVal === 'battery') return +b.dataset.battery - +a.dataset.battery;
-    return 0;
-  });
-  cards.forEach(c => { c.style.display = 'none'; list.removeChild(c); });
-  visible.forEach(c => { c.style.display = ''; list.appendChild(c); });
-  cards.filter(c => !visible.includes(c)).forEach(c => list.appendChild(c));
-  countEl.textContent = 'แสดง ' + visible.length + ' รุ่น';
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-
-sortSel.addEventListener('change', render);
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
-    render();
+function filterCat(page,cat,btn){
+  // update tabs
+  btn.closest('.sub-tabs').querySelectorAll('.sub-tab').forEach(t=>t.classList.remove('on'));
+  btn.classList.add('on');
+  // filter cards
+  document.querySelectorAll('#grid-'+page+' .prod-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
   });
-});
-
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
-    q.parentElement.classList.toggle('open');
-  });
-});
-
-render();
+}
 </script>
 </body>
 </html>
